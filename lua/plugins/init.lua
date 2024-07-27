@@ -73,7 +73,7 @@ local plugins = {
       {
         "L3MON4D3/LuaSnip",
         config = function()
-          require('plugins.configs.luasnip')
+          require "plugins.configs.luasnip"
         end,
       },
 
@@ -207,6 +207,12 @@ local plugins = {
     "otavioschwanck/arrow.nvim",
     config = function()
       require "plugins.configs.arrow"
+    end,
+  },
+  {
+    "ahmedkhalf/project.nvim",
+    config = function()
+      require('plugins.configs.project')
     end,
   },
 }
