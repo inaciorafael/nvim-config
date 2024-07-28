@@ -1,5 +1,7 @@
 local function restore_session()
   require("persistence").load()
+
+  vim.cmd(":NvimTreeToggle")
 end
 
 require("mini.starter").setup {
@@ -16,17 +18,17 @@ require("mini.starter").setup {
   -- - Array: elements of these three types (i.e. item, array, function).
   -- If `nil` (default), default items will be used (see |mini.starter|).
   items = {
-    { action = "Telescope find_files", name = "find files", section = "Telescope" },
-    { action = "Telescope live_grep", name = "seach word", section = "Telescope" },
-    { action = "Telescope oldfiles", name = "recent files", section = "Telescope" },
-    { action = "TodoTelescope", name = "todos", section = "Telescope" },
+    { action = "Telescope find_files", name = "Find Files", section = "Telescope" },
+    { action = "Telescope live_grep", name = "Seach Word", section = "Telescope" },
+    { action = "Telescope oldfiles", name = "Recent Files", section = "Telescope" },
+    { action = "TodoTelescope", name = "Todos", section = "Telescope" },
 
-    { action = "Telescope projects", name = "projects", section = "Projects" },
+    { action = "Telescope projects", name = "Projects", section = "Projects" },
 
-    { action = restore_session, name = "restore session", section = "Session" },
+    { action = restore_session, name = "Restore Session", section = "Session" },
 
-    { action = "enew", name = "E: New Buffer", section = "Builtin actions" },
-    { action = "qall!", name = "Q: Quit Neovim", section = "Builtin actions" },
+    { action = "enew", name = "New Buffer", section = "Builtin actions" },
+    { action = "qall!", name = "Quit Neovim", section = "Builtin actions" },
   },
 
   -- Header to be displayed before items. Converted to single string via
