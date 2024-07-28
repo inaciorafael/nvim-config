@@ -1,4 +1,5 @@
 local map = vim.keymap.set
+vim.g.mapleader = " "
 
 -- general mappings
 map("n", "<C-s>", "<cmd> w <CR>")
@@ -21,7 +22,7 @@ map("n", "<leader>fo", "<cmd> Telescope oldfiles <CR>")
 map("n", "<leader>fw", "<cmd> Telescope live_grep <CR>")
 map("n", "<leader>gt", "<cmd> Telescope git_status <CR>")
 map("n", "<leader>lw", "<cmd> Telescope diagnostics <CR>")
-map("n", "<leader>lp", "<cmd> Telescope projecs <CR>")
+map("n", "<leader>lp", "<cmd> Telescope projects <CR>")
 
 -- bufferline, cycle buffers
 map("n", "<S-l>", "<cmd> BufferLineCycleNext <CR>")
@@ -46,3 +47,16 @@ map("n", "S", "<cmd> HopChar1 <CR>", { noremap = true, silent = true })
 
 -- Todo comments
 map("n", "tl", "<cmd> TodoTelescope <CR>")
+
+-- Session
+-- load the session for the current directory
+vim.keymap.set("n", "<leader>qs", function() require("persistence").load() end)
+
+-- select a session to load
+vim.keymap.set("n", "<leader>qS", function() require("persistence").select() end)
+
+-- load the last session
+vim.keymap.set("n", "<leader>ql", function() require("persistence").load({ last = true }) end)
+
+-- stop Persistence => session won't be saved on exit
+vim.keymap.set("n", "<leader>qd", function() require("persistence").stop() end)

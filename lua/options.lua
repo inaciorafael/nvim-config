@@ -1,7 +1,5 @@
 local o = vim.o
 
-vim.g.mapleader = " "
-
 o.laststatus = 3 -- global statusline
 o.showmode = false
 o.cursorline = true
