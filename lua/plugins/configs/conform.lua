@@ -4,5 +4,6 @@ require("conform").setup {
     javascript = { "prettier" },
     typescript = { "prettier" },
     typescriptreact = { "prettier" },
+    javascriptreact = { "prettier" },
   },
 }
