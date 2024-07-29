@@ -232,6 +232,16 @@ local plugins = {
       require "plugins.configs.mini-starter"
     end,
   },
+  {
+    "ellisonleao/carbon-now.nvim",
+    lazy = true,
+    cmd = "CarbonNow",
+    config = function()
+      require "plugins.configs.carbon-now"
+    end,
+    ---@param opts cn.ConfigSchema
+    -- opts = { [[ your custom config here ]] },
+  },
 }
 
 require("lazy").setup(plugins, require "lazy_config")
