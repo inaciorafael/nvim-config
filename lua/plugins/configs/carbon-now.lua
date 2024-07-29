@@ -1,3 +1,5 @@
+-- FIXME: Remover plugin e adicionar função pura para criar screenshot do código usando Carbon.sh
+
 require("carbon-now").setup {
   base_url = "https://carbon.now.sh/",
   options = {
