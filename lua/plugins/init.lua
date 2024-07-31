@@ -138,6 +138,7 @@ local plugins = {
   -- files finder etc
   {
     "nvim-telescope/telescope.nvim",
+    -- dependencies = { "debugloop/telescope-undo.nvim" },
     cmd = "Telescope",
     config = function()
       require "plugins.configs.telescope"
@@ -243,6 +244,12 @@ local plugins = {
     -- opts = { [[ your custom config here ]] },
   },
   { "famiu/bufdelete.nvim" },
+  {
+    "nat-418/boole.nvim",
+    config = function()
+      require "plugins.configs.boole"
+    end,
+  },
 }
 
 require("lazy").setup(plugins, require "lazy_config")
