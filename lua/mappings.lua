@@ -27,7 +27,7 @@ map("n", "<leader>lp", "<cmd> Telescope projects <CR>")
 -- bufferline, cycle buffers
 map("n", "<S-l>", "<cmd> BufferLineCycleNext <CR>")
 map("n", "<S-h>", "<cmd> BufferLineCyclePrev <CR>")
-map("n", "<S-q>", "<cmd> bd <CR>")
+map("n", "<S-q>", "<cmd> Bdelete <CR>")
 map("n", "<S-p>", "<cmd> BufferLineTogglePin <CR>")
 
 -- comment.nvim

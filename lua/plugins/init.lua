@@ -242,6 +242,7 @@ local plugins = {
     ---@param opts cn.ConfigSchema
     -- opts = { [[ your custom config here ]] },
   },
+  { "famiu/bufdelete.nvim" },
 }
 
 require("lazy").setup(plugins, require "lazy_config")
