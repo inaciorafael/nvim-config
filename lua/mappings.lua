@@ -17,6 +17,8 @@ map("n", "<leader>e", "<cmd> NvimTreeToggle <CR>")
 -- map("n", "<C-h>", "<cmd> NvimTreeFocus <CR>")
 
 -- telescope
+-- TODO: Configurar Telescope para buscar arquivos na raiz do projeto
+-- Ex: nnoremap <leader>ff :Telescope find_files cwd=<root_project_path><CR>
 map("n", "<leader>ff", "<cmd> Telescope find_files <CR>")
 map("n", "<leader>fo", "<cmd> Telescope oldfiles <CR>")
 map("n", "<leader>fw", "<cmd> Telescope live_grep <CR>")
