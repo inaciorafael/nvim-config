@@ -42,15 +42,6 @@ local plugins = {
     end,
   },
 
-  -- statusline
-
-  {
-    "echasnovski/mini.statusline",
-    config = function()
-      require("mini.statusline").setup { set_vim_settings = false }
-    end,
-  },
-
   -- we use cmp plugin only when in insert mode
   -- so lets lazyload it at InsertEnter event, to know all the events check h-events
   -- completion , now all of these plugins are dependent on cmp, we load them after cmp
@@ -248,6 +239,13 @@ local plugins = {
     "nat-418/boole.nvim",
     config = function()
       require "plugins.configs.boole"
+    end,
+  },
+  {
+    "nvim-lualine/lualine.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    config = function()
+      require "plugins.configs.lualine"
     end,
   },
 }

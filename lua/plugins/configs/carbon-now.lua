@@ -1,6 +1,3 @@
--- FIXME: Remover plugin e adicionar função pura para criar screenshot do código usando Carbon.sh
--- TODO: Trocar de lib para fazer captura de código: https://github.com/mistricky/codesnap.nvim
-
 require("carbon-now").setup {
   base_url = "https://carbon.now.sh/",
   options = {
