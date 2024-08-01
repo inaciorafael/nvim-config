@@ -1,6 +1,6 @@
 -- mason, write correct names only
 vim.api.nvim_create_user_command("MasonInstallAll", function()
-  vim.cmd "MasonInstall css-lsp html-lsp lua-language-server typescript-language-server stylua prettier tailwindcss-language-server"
+  vim.cmd "MasonInstall css-lsp html-lsp lua-language-server typescript-language-server stylua prettier tailwindcss-language-server emmet-language-server"
 end, {})
 
 -- close some filetypes with <q>

@@ -248,6 +248,20 @@ local plugins = {
       require "plugins.configs.lualine"
     end,
   },
+  {
+    "j-hui/fidget.nvim",
+    config = function()
+      require("fidget").setup {}
+    end,
+  },
+  {
+    "vigoux/notifier.nvim",
+    config = function()
+      require("notifier").setup {
+        -- You configuration here
+      }
+    end,
+  },
 }
 
 require("lazy").setup(plugins, require "lazy_config")
