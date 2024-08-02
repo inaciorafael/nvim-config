@@ -17,14 +17,20 @@ map("n", "<leader>e", "<cmd> NvimTreeToggle <CR>")
 -- map("n", "<C-h>", "<cmd> NvimTreeFocus <CR>")
 
 -- telescope
--- TODO: Configurar Telescope para buscar arquivos na raiz do projeto
--- Ex: nnoremap <leader>ff :Telescope find_files cwd=<root_project_path><CR>
-map("n", "<leader>ff", "<cmd> Telescope find_files <CR>")
+local function find_files()
+  require("telescope.builtin").find_files { cwd = vim.fn.getcwd() }
+end
+
+local function live_grep()
+  require("telescope.builtin").live_grep({ cwd = vim.fn.getcwd() })
+end
+
+map("n", "<leader>ff", find_files)
 map("n", "<leader>fo", "<cmd> Telescope oldfiles <CR>")
-map("n", "<leader>fw", "<cmd> Telescope live_grep <CR>")
+map("n", "<leader>fw", live_grep)
 map("n", "<leader>gt", "<cmd> Telescope git_status <CR>")
-map("n", "<leader>lw", "<cmd> Telescope diagnostics <CR>")
 map("n", "<leader>lp", "<cmd> Telescope projects <CR>")
+map("n", "<leader>lw", "<cmd> Telescope diagnostics <CR>")
 
 -- bufferline, cycle buffers
 map("n", "<S-l>", "<cmd> BufferLineCycleNext <CR>")

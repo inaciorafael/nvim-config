@@ -1,7 +1,11 @@
-local function restore_session()
-  require("persistence").load()
+local starter = require("mini.starter")
 
-  vim.cmd(":NvimTreeToggle")
+local function restore_session()
+  require("persistence").load() -- Load session
+
+  -- vim.cmd(":NvimTreeToggle") -- Open NvimTree
+  vim.cmd(":NvimTreeFindFile") -- Open NvimTree
+  vim.api.nvim_command("wincmd l") -- Move to right buffer
 end
 
 require("mini.starter").setup {
@@ -20,8 +24,10 @@ require("mini.starter").setup {
   items = {
     { action = "Telescope find_files", name = "Find Files", section = "Telescope" },
     { action = "Telescope live_grep", name = "Seach Word", section = "Telescope" },
-    { action = "Telescope oldfiles", name = "Recent Files", section = "Telescope" },
+    -- { action = "Telescope oldfiles", name = "Recent Files", section = "Telescope" },
     { action = "TodoTelescope", name = "Todos", section = "Telescope" },
+
+    starter.sections.recent_files(5, true),
 
     { action = "Telescope projects", name = "Projects", section = "Projects" },
 

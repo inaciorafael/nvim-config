@@ -86,3 +86,22 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
     vim.opt_local.conceallevel = 0
   end,
 })
+
+-- Open path in NvimTree on enter buffer
+-- TODO: Consertar função para abrir o mini.starter
+vim.api.nvim_create_autocmd("BufEnter", {
+  callback = function()
+    local ignored_file_types = { "ministarter", "help", "starter", "Starter" }
+    local current_window = vim.api.nvim_get_current_win()
+    local filetype = vim.bo.filetype
+
+    for _, ft in ipairs(ignored_file_types) do
+      if filetype == ft then
+        return
+      end
+    end
+
+    -- vim.cmd "NvimTreeFindFile" -- Linha onde existe a falha
+    vim.api.nvim_set_current_win(current_window)
+  end,
+})
