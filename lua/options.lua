@@ -1,5 +1,3 @@
-local utils = require('./utils')
-
 local o = vim.o
 
 vim.o.winbar = "%= %f "

@@ -1,6 +1,6 @@
 -- mason, write correct names only
 vim.api.nvim_create_user_command("MasonInstallAll", function()
-  vim.cmd "MasonInstall css-lsp html-lsp lua-language-server typescript-language-server stylua prettier tailwindcss-language-server emmet-language-server"
+  vim.cmd "MasonInstall css-lsp html-lsp lua-language-server typescript-language-server stylua prettier tailwindcss-language-server emmet-language-server pyright"
 end, {})
 
 -- close some filetypes with <q>
@@ -91,11 +91,17 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 -- TODO: Consertar função para abrir o mini.starter
 
 -- vim.api.nvim_create_autocmd({ "BufEnter" }, {
+--   pattern = "*",
 --   callback = function()
 --     local bufname = vim.fn.expand "%"
 --     local ignored_file_types = { "ministarter", "help", "starter", "Starter" }
 --     local current_window = vim.api.nvim_get_current_win()
 --     local filetype = vim.bo.filetype
+--
+--     if not (vim.bo.filetype == "ministarter") then
+--       -- vim.cmd "NvimTreeFindFile" -- Linha onde existe a falha
+--       vim.api.nvim_set_current_win(current_window)
+--     end
 --
 --     if vim.bo.filetype ~= "ministarter" then
 --       return
@@ -107,7 +113,7 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 --       end
 --     end
 --
---     -- vim.cmd "NvimTreeFindFile" -- Linha onde existe a falha
+--     vim.cmd "NvimTreeFindFile" -- Linha onde existe a falha
 --     vim.api.nvim_set_current_win(current_window)
 --   end,
 -- })

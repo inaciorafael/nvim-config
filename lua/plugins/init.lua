@@ -283,12 +283,8 @@ local plugins = {
     "mbbill/undotree",
     cmd = "UndotreeToggle", -- Carrega o plugin somente quando o comando for executado
     config = function()
-      require('plugins.configs.undotree')
-      -- Configurações adicionais, se necessário
+      require "plugins.configs.undotree"
     end,
-    -- keys = {
-    --   { "<leader>u", "<cmd>UndotreeToggle<CR>", desc = "Toggle Undotree" },
-    -- },
   },
 }
 

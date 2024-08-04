@@ -1,4 +1,6 @@
 local map = vim.keymap.set
+local default_opts = { noremap = true }
+
 vim.g.mapleader = " "
 
 -- general mappings
@@ -14,11 +16,12 @@ map("n", "<C-k>", "<C-w>k")
 
 -- nvimtree
 map("n", "<leader>e", "<cmd> NvimTreeToggle <CR>")
--- map("n", "<C-h>", "<cmd> NvimTreeFocus <CR>")
+map("n", "<C-f>", "<cmd> NvimTreeFindFile <CR>")
 
 -- telescope
 local function find_files()
-  require("telescope.builtin").find_files { cwd = vim.fn.getcwd() }
+  -- require("telescope.builtin").find_files { cwd = vim.fn.getcwd() }
+  require("telescope.builtin").find_files { find_command = { "rg", "--files", "--hidden", "-g", "!.git" } }
 end
 
 local function live_grep()
@@ -26,12 +29,12 @@ local function live_grep()
 end
 
 map("n", "<leader>ff", find_files)
+map("n", "<leader>fb", "<cmd> Telescope buffers <cr>", default_opts)
 map("n", "<leader>fo", "<cmd> Telescope oldfiles <CR>")
 map("n", "<leader>fw", live_grep)
 map("n", "<leader>gt", "<cmd> Telescope git_status <CR>")
-map("n", "<leader>lp", "<cmd> Telescope projects <CR>")
+map("n", "<leader>fp", "<cmd> Telescope projects <CR>")
 map("n", "<leader>lw", "<cmd> Telescope diagnostics <CR>")
-map("n", "<leader>u", "<cmd> Telescope undo <CR>")
 
 -- bufferline, cycle buffers
 map("n", "<S-l>", "<cmd> BufferLineCycleNext <CR>")
@@ -71,10 +74,10 @@ end
 
 local function open_undotree()
   if is_nvim_tree_open() then
-    vim.cmd("NvimTreeClose")
+    vim.cmd "NvimTreeClose"
   end
 
-  vim.cmd("UndotreeToggle")
+  vim.cmd "UndotreeToggle"
 end
 
 map("n", "<leader>u", open_undotree, { noremap = true, silent = true })
