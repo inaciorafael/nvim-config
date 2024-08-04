@@ -22,7 +22,7 @@ local function find_files()
 end
 
 local function live_grep()
-  require("telescope.builtin").live_grep({ cwd = vim.fn.getcwd() })
+  require("telescope.builtin").live_grep { cwd = vim.fn.getcwd() }
 end
 
 map("n", "<leader>ff", find_files)
@@ -36,7 +36,8 @@ map("n", "<leader>u", "<cmd> Telescope undo <CR>")
 -- bufferline, cycle buffers
 map("n", "<S-l>", "<cmd> BufferLineCycleNext <CR>")
 map("n", "<S-h>", "<cmd> BufferLineCyclePrev <CR>")
-map("n", "<S-q>", "<cmd> Bdelete <CR>") map("n", "<S-p>", "<cmd> BufferLineTogglePin <CR>")
+map("n", "<S-q>", "<cmd> Bdelete <CR>")
+map("n", "<S-p>", "<cmd> BufferLineTogglePin <CR>")
 
 -- comment.nvim
 map("n", "<leader>/", "gcc", { remap = true })
@@ -55,3 +56,25 @@ map("n", "S", "<cmd> HopChar1 <CR>", { noremap = true, silent = true })
 
 -- Todo comments
 map("n", "tl", "<cmd> TodoTelescope <CR>")
+
+-- Undotree
+-- Verificar se o NvimTree está visível
+local function is_nvim_tree_open()
+  for _, buf in ipairs(vim.api.nvim_list_bufs()) do
+    local buf_name = vim.api.nvim_buf_get_name(buf)
+    if buf_name:match "NvimTree_1" then
+      return true
+    end
+  end
+  return false
+end
+
+local function open_undotree()
+  if is_nvim_tree_open() then
+    vim.cmd("NvimTreeClose")
+  end
+
+  vim.cmd("UndotreeToggle")
+end
+
+map("n", "<leader>u", open_undotree, { noremap = true, silent = true })

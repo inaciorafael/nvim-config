@@ -283,12 +283,12 @@ local plugins = {
     "mbbill/undotree",
     cmd = "UndotreeToggle", -- Carrega o plugin somente quando o comando for executado
     config = function()
+      require('plugins.configs.undotree')
       -- Configurações adicionais, se necessário
-      vim.g.undotree_WindowLayout = 2 -- Exemplo: define o layout da janela do Undotree
     end,
-    keys = {
-      { "<leader>u", "<cmd>UndotreeToggle<CR>", desc = "Toggle Undotree" },
-    },
+    -- keys = {
+    --   { "<leader>u", "<cmd>UndotreeToggle<CR>", desc = "Toggle Undotree" },
+    -- },
   },
 }
 
