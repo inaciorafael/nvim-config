@@ -31,12 +31,12 @@ map("n", "<leader>fw", live_grep)
 map("n", "<leader>gt", "<cmd> Telescope git_status <CR>")
 map("n", "<leader>lp", "<cmd> Telescope projects <CR>")
 map("n", "<leader>lw", "<cmd> Telescope diagnostics <CR>")
+map("n", "<leader>u", "<cmd> Telescope undo <CR>")
 
 -- bufferline, cycle buffers
 map("n", "<S-l>", "<cmd> BufferLineCycleNext <CR>")
 map("n", "<S-h>", "<cmd> BufferLineCyclePrev <CR>")
-map("n", "<S-q>", "<cmd> Bdelete <CR>")
-map("n", "<S-p>", "<cmd> BufferLineTogglePin <CR>")
+map("n", "<S-q>", "<cmd> Bdelete <CR>") map("n", "<S-p>", "<cmd> BufferLineTogglePin <CR>")
 
 -- comment.nvim
 map("n", "<leader>/", "gcc", { remap = true })

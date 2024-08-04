@@ -1,4 +1,12 @@
+local utils = require('./utils')
+
 local o = vim.o
+
+if utils.get_os_name() == "windows" then
+  vim.g.undotree_DiffCommand = utils.get_nvim_path('/bin/diff.exe')
+end
+
+vim.o.winbar = "%= %f "
 
 o.laststatus = 3 -- global statusline
 o.showmode = false
