@@ -5,5 +5,6 @@ require("conform").setup {
     typescript = { "prettier" },
     typescriptreact = { "prettier" },
     javascriptreact = { "prettier" },
+    python = { "black" }
   },
 }
