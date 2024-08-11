@@ -4,7 +4,7 @@ vim.api.nvim_create_user_command("MasonInstallAll", function()
 end, {})
 
 vim.api.nvim_create_user_command("TSInstallAll", function()
-  vim.cmd "TSInstallAll css tsx json html javascript typescript markdown python lua"
+  vim.cmd "TSInstall css tsx json html lua javascript typescript markdown python"
 end, {})
 
 -- close some filetypes with <q>
