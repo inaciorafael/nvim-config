@@ -1,10 +1,15 @@
 local map = vim.keymap.set
 local default_opts = { noremap = true }
 
+local utils = require('utils')
+local functions = require('functions')
+
 vim.g.mapleader = " "
 
+map('n', '<C-s>', functions.switch_case, default_opts)
+
 -- general mappings
-map("n", "<C-s>", "<cmd> w <CR>")
+-- map("n", "<C-s>", "<cmd> w <CR>")
 -- map("i", "jk", "<ESC>")
 -- map("n", "<C-c>", "<cmd> %y+ <CR>") -- copy whole filecontent
 
@@ -15,7 +20,7 @@ map("n", "<C-j>", "<C-w>j")
 map("n", "<C-k>", "<C-w>k")
 
 -- nvimtree
-map("n", "<leader>e", "<cmd> NvimTreeToggle <CR>")
+map("n", "<leader>e", "<cmd> nvimTreeToggle <CR>")
 map("n", "<C-f>", "<cmd> NvimTreeFindFile <CR>")
 
 -- telescope
@@ -56,6 +61,7 @@ map("n", "-", "<cmd> Oil <CR>", { desc = "Open parent directory" })
 
 -- Hop
 map("n", "S", "<cmd> HopChar1 <CR>", { noremap = true, silent = true })
+map("n", "W", "<cmd> HopChar1CurrentLine <CR>", default_opts)
 
 -- Todo comments
 map("n", "tl", "<cmd> TodoTelescope <CR>")
@@ -69,6 +75,7 @@ local function is_nvim_tree_open()
       return true
     end
   end
+
   return false
 end
 

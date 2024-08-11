@@ -89,7 +89,7 @@ return {
     import {{ gql, useQuery }} from '@apollo/client';
 
     export const {query_name} = gql`
-
+      // QUERY_HERE
     `;
 
     interface QueryOptions {{
