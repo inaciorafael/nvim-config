@@ -1,7 +1,6 @@
 local map = vim.keymap.set
 local default_opts = { noremap = true }
 
-local utils = require('utils')
 local functions = require('functions')
 
 vim.g.mapleader = " "
@@ -20,7 +19,7 @@ map("n", "<C-j>", "<C-w>j")
 map("n", "<C-k>", "<C-w>k")
 
 -- nvimtree
-map("n", "<leader>e", "<cmd> nvimTreeToggle <CR>")
+map("n", "<leader>e", "<cmd> NvimTreeToggle <CR>")
 map("n", "<C-f>", "<cmd> NvimTreeFindFile <CR>")
 
 -- telescope

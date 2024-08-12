@@ -286,6 +286,26 @@ local plugins = {
       require "plugins.configs.undotree"
     end,
   },
+  {
+    "m4xshen/hardtime.nvim",
+    dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
+    config = function()
+      require "plugins.configs.hardtime"
+    end,
+  },
+  {
+    "mvllow/modes.nvim",
+    tag = "v0.2.0",
+    config = function()
+      require "plugins.configs.modes"
+    end,
+  },
+  {
+    "cappyzawa/trim.nvim",
+    config = function()
+      require "plugins.configs.trim"
+    end,
+  },
 }
 
 require("lazy").setup(plugins, require "lazy_config")
