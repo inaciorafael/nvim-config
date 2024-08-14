@@ -7,6 +7,10 @@ vim.api.nvim_create_user_command("TSInstallAll", function()
   vim.cmd "TSInstall css tsx json html lua javascript typescript markdown python"
 end, {})
 
+vim.api.nvim_create_user_command("S", function()
+  vim.cmd "source %"
+end, {})
+
 -- close some filetypes with <q>
 vim.api.nvim_create_autocmd("FileType", {
   group = vim.api.nvim_create_augroup("close_with_q", { clear = false }),

@@ -306,6 +306,12 @@ local plugins = {
       require "plugins.configs.trim"
     end,
   },
+  {
+    "TobinPalmer/rayso.nvim",
+    config = function()
+      require "plugins.configs.rayso"
+    end,
+  },
 }
 
 require("lazy").setup(plugins, require "lazy_config")
