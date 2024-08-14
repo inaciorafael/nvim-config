@@ -7,7 +7,6 @@ end
 
 local M = {}
 
-
 function M.get_username()
   return os.getenv "USER" or os.getenv "USERNAME"
 end

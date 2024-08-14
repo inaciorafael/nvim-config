@@ -305,11 +305,16 @@ local plugins = {
     config = function()
       require "plugins.configs.trim"
     end,
-  },
-  {
+  }, {
     "TobinPalmer/rayso.nvim",
     config = function()
       require "plugins.configs.rayso"
+    end,
+  },
+  {
+    "mrjones2014/smart-splits.nvim",
+    config = function()
+      require "plugins.configs.smart-splits"
     end,
   },
 }
