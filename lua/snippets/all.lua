@@ -12,4 +12,8 @@ return {
     t { "", "After jumping once more, the snippet is exited there ->" },
     i(0),
   }),
+  s("sts", {
+    t { "import { StyleSheet } from 'react-native'" },
+    t { "", "", "export default StyleSheet.create({})" },
+  }),
 }

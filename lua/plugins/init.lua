@@ -305,7 +305,8 @@ local plugins = {
     config = function()
       require "plugins.configs.trim"
     end,
-  }, {
+  },
+  {
     "TobinPalmer/rayso.nvim",
     config = function()
       require "plugins.configs.rayso"
@@ -315,6 +316,22 @@ local plugins = {
     "mrjones2014/smart-splits.nvim",
     config = function()
       require "plugins.configs.smart-splits"
+    end,
+  },
+  {
+    "backdround/global-note.nvim",
+    config = function()
+      require "plugins.configs.global-notes"
+    end,
+  },
+  {
+    "sainnhe/everforest",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      -- Optionally configure and load the colorscheme
+      -- directly inside the plugin declaration.
+      vim.g.everforest_enable_italic = true
     end,
   },
 }
