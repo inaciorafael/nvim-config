@@ -334,6 +334,26 @@ local plugins = {
       vim.g.everforest_enable_italic = true
     end,
   },
+  {
+    "Selyss/mind.nvim",
+    branch = "v2.2",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons", -- optional, used for icons
+    },
+    opts = {
+      -- your configuration comes here
+    },
+  },
+  {
+    "stevearc/quicker.nvim",
+    event = "FileType qf",
+    ---@module "quicker"
+    ---@type quicker.SetupOptions
+    config = function ()
+      require('plugins.configs.quickfix')
+    end
+  },
 }
 
 require("lazy").setup(plugins, require "lazy_config")
