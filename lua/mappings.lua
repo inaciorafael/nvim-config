@@ -60,7 +60,6 @@ map("n", "-", "<cmd> Oil <CR>", { desc = "Open parent directory" })
 
 -- Hop
 map("n", "S", "<cmd> HopChar1 <CR>", { noremap = true, silent = true })
-map("n", "W", "<cmd> HopChar1CurrentLine <CR>", default_opts)
 
 -- Todo comments
 map("n", "tl", "<cmd> TodoTelescope <CR>")
