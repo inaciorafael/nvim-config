@@ -345,15 +345,6 @@ local plugins = {
       -- your configuration comes here
     },
   },
-  {
-    "stevearc/quicker.nvim",
-    event = "FileType qf",
-    ---@module "quicker"
-    ---@type quicker.SetupOptions
-    config = function ()
-      require('plugins.configs.quickfix')
-    end
-  },
 }
 
 require("lazy").setup(plugins, require "lazy_config")
