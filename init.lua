@@ -22,3 +22,5 @@ require "plugins"
 
 -- vim.cmd "colorscheme nightfox"
 vim.cmd.colorscheme "everforest"
+
+-- TODO: Escrever função para mockar objetos com dados fake para desenvolvimento frontend.
