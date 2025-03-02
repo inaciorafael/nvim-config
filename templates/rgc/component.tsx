@@ -1,14 +1,14 @@
 import React from 'react';
 
-import { {{name}}Props } from './{{name}}.model.ts'
+import { {{Name}}Props } from './{{name}}.model.ts'
 import './{{name}}.styles.css';
 
-const {{name}}: React.FC<{{name}}Props> = ({}) => {
+const {{Name}}: React.FC<{{Name}}Props> = ({}) => {
   return (
     <div className="container">
-      <h1>{{name}}</h1>
+      <h1>{{name}} works!</h1>
     </div>
   );
 };
 
-export default {{name}};
+export default {{Name}};

@@ -40,10 +40,40 @@ function M.capitalize(nome)
   return nome:sub(1, 1):upper() .. nome:sub(2)
 end
 
+function M.para_camel_case(str)
+  return str
+    :gsub("[-_](%l)", function(match)
+      return match:upper()
+    end)
+    :gsub("[-_]", "")
+end
+
+function M.stringToPascalCase(str)
+  local result = ""
+  local capitalizeNext = true
+
+  for i = 1, #str do
+    local char = str:sub(i, i)
+
+    if char:match "%w" then -- Verifica se é um caractere alfanumérico
+      if capitalizeNext then
+        result = result .. char:upper()
+        capitalizeNext = false
+      else
+        result = result .. char:lower()
+      end
+    else
+      capitalizeNext = true -- Próximo caractere alfanumérico deve ser maiúsculo
+    end
+  end
+
+  return result
+end
+
 function M.substituir_placeholders(conteudo, placeholders)
   for chave, valor in pairs(placeholders) do
-    conteudo = conteudo:gsub("{{" .. M.capitalize(chave) .. "}}", M.capitalize(valor))
-    conteudo = conteudo:gsub("{{" .. chave .. "}}", valor)
+    conteudo =
+      conteudo:gsub("{{" .. M.capitalize(chave) .. "}}", M.stringToPascalCase(valor)):gsub("{{" .. chave .. "}}", valor)
   end
 
   return conteudo
@@ -56,7 +86,7 @@ function M.carregar_template(caminho_template, nome)
     return nil
   end
 
-  local conteudo = file:read("*a")
+  local conteudo = file:read "*a"
   file:close()
 
   return conteudo:gsub("{{name}}", nome)
