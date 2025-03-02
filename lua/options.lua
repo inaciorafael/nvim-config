@@ -8,6 +8,7 @@ o.cursorline = true
 o.relativenumber = true
 
 o.clipboard = "unnamedplus"
+vim.opt.clipboard = "unnamedplus"
 
 -- Indenting
 o.expandtab = true
