@@ -23,7 +23,7 @@ function M.switch_case()
   end
 end
 
-local function criar_componente(nome)
+local function criar_componente(nome, type)
   if not nome or nome == "" then
     print "Erro: Nome do componente não fornecido."
     return
@@ -33,16 +33,29 @@ local function criar_componente(nome)
   local node = nvim_tree.tree.get_node_under_cursor()
   local diretorio_atual = node and node.absolute_path or vim.fn.getcwd()
 
-  -- Cria a pasta do componente (se não existir)
   local pasta_componente = diretorio_atual .. "/" .. nome
-  vim.fn.mkdir(pasta_componente, "p") -- "p" cria os diretórios pais, se necessário
+  vim.fn.mkdir(pasta_componente, "p")
 
-  local templates = {
-    { caminho_template = utils.get_nvim_path "/templates/rgc/component.tsx", extensao = ".component.tsx" },
-    { caminho_template = utils.get_nvim_path "/templates/rgc/model.ts", extensao = ".model.ts" },
-    { caminho_template = utils.get_nvim_path "/templates/rgc/styles.css", extensao = ".styles.css" },
-    { caminho_template = utils.get_nvim_path "/templates/rgc/index.ts", extensao = "/index.ts" },
-  }
+  local templates
+
+  if type == "component" then
+    templates = {
+      { caminho_template = utils.get_nvim_path "/templates/rgc/component.tsx", extensao = ".component.tsx" },
+      { caminho_template = utils.get_nvim_path "/templates/rgc/model.ts", extensao = ".model.ts" },
+      { caminho_template = utils.get_nvim_path "/templates/rgc/styles.css", extensao = ".styles.css" },
+      { caminho_template = utils.get_nvim_path "/templates/rgc/index.ts", extensao = "/index.ts" },
+    }
+  end
+
+  if type == 'page' then
+    templates = {
+      { caminho_template = utils.get_nvim_path "/templates/rgp/view.tsx", extensao = ".view.tsx" },
+      { caminho_template = utils.get_nvim_path "/templates/rgp/types.ts", extensao = ".types.ts" },
+      { caminho_template = utils.get_nvim_path "/templates/rgp/model.ts", extensao = ".model.ts" },
+      { caminho_template = utils.get_nvim_path "/templates/rgp/styles.css", extensao = ".styles.css" },
+      { caminho_template = utils.get_nvim_path "/templates/rgp/index.ts", extensao = "/index.ts" },
+    }
+  end
 
   for _, template in ipairs(templates) do
     local conteudo = utils.carregar_template(template.caminho_template, nome)
@@ -75,7 +88,11 @@ local function criar_componente(nome)
 end
 
 vim.api.nvim_create_user_command("Rgc", function(opts)
-  criar_componente(opts.args)
+  criar_componente(opts.args, 'component')
+end, { nargs = 1 })
+
+vim.api.nvim_create_user_command("Rgp", function(opts)
+  criar_componente(opts.args, 'page')
 end, { nargs = 1 })
 
 return M
