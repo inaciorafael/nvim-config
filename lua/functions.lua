@@ -1,5 +1,5 @@
 local M = {}
-local utils = require('./utils')
+local utils = require "./utils"
 
 function M.switch_case()
   local line, col = unpack(vim.api.nvim_win_get_cursor(0))
@@ -33,11 +33,15 @@ local function criar_componente(nome)
   local node = nvim_tree.tree.get_node_under_cursor()
   local diretorio_atual = node and node.absolute_path or vim.fn.getcwd()
 
+  -- Cria a pasta do componente (se não existir)
+  local pasta_componente = diretorio_atual .. "/" .. nome
+  vim.fn.mkdir(pasta_componente, "p") -- "p" cria os diretórios pais, se necessário
+
   local templates = {
     { caminho_template = utils.get_nvim_path "/templates/rgc/component.tsx", extensao = ".component.tsx" },
     { caminho_template = utils.get_nvim_path "/templates/rgc/model.ts", extensao = ".model.ts" },
     { caminho_template = utils.get_nvim_path "/templates/rgc/styles.css", extensao = ".styles.css" },
-    { caminho_template = utils.get_nvim_path "/templates/rgc/index.ts", extensao = "index.ts" },
+    { caminho_template = utils.get_nvim_path "/templates/rgc/index.ts", extensao = "/index.ts" },
   }
 
   for _, template in ipairs(templates) do
@@ -49,12 +53,15 @@ local function criar_componente(nome)
       return
     end
 
-    local caminho_arquivo = diretorio_atual .. "/" .. nome .. template.extensao
-
-    if template.extensao == 'index.ts' then
-      caminho_arquivo = diretorio_atual .. "/" .. template.extensao
+    -- Define o caminho do arquivo
+    local caminho_arquivo
+    if template.extensao == "/index.ts" then
+      caminho_arquivo = pasta_componente .. template.extensao
+    else
+      caminho_arquivo = pasta_componente .. "/" .. nome .. template.extensao
     end
 
+    -- Cria o arquivo e escreve o conteúdo
     local file = io.open(caminho_arquivo, "w")
     if file then
       file:write(conteudo)
@@ -64,7 +71,7 @@ local function criar_componente(nome)
     end
   end
 
-  print("Arquivos do componente criados em " .. diretorio_atual)
+  print("Arquivos do componente criados em " .. pasta_componente)
 end
 
 vim.api.nvim_create_user_command("Rgc", function(opts)
