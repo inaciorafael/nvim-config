@@ -22,4 +22,44 @@ function M.switch_case()
   end
 end
 
+local function criar_componente(nome)
+  if not nome or nome == "" then
+    print "Erro: Nome do componente não fornecido."
+    return
+  end
+
+  local nvim_tree = require "nvim-tree.api"
+  local diretorio_atual = nvim_tree.tree.get_node_under_cursor().absolute_path
+  -- nvim-tree-api.fs.create()
+
+  print("diretorio_atual", diretorio_atual)
+
+  if not diretorio_atual then
+    diretorio_atual = vim.fn.getcwd()
+  end
+
+  local arquivos = {
+    diretorio_atual .. "/" .. nome .. ".component.ts",
+    diretorio_atual .. "/" .. nome .. ".model.ts",
+    diretorio_atual .. "/" .. nome .. ".styles.css",
+    diretorio_atual .. "/" .. 'index.ts',
+  }
+
+  for _, arquivo in ipairs(arquivos) do
+    local file = io.open(arquivo, "w")
+    if file then
+      file:write ""
+      file:close()
+    else
+      print("Erro ao criar o arquivo: " .. arquivo)
+    end
+  end
+
+  print("Arquivos do componente criados em " .. diretorio_atual .. ": " .. table.concat(arquivos, ", "))
+end
+
+vim.api.nvim_create_user_command("Rgc", function(opts)
+  criar_componente(opts.args)
+end, { nargs = 1 })
+
 return M
