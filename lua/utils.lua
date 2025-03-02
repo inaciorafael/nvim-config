@@ -36,4 +36,30 @@ function M.get_nvim_path(rest_path)
   return vim.fn.expand(nvim_paths[os_name] .. ensure_leading_slash(rest_path))
 end
 
+function M.capitalize(nome)
+  return nome:sub(1, 1):upper() .. nome:sub(2)
+end
+
+function M.substituir_placeholders(conteudo, placeholders)
+  for chave, valor in pairs(placeholders) do
+    conteudo = conteudo:gsub("{{" .. M.capitalize(chave) .. "}}", M.capitalize(valor))
+    conteudo = conteudo:gsub("{{" .. chave .. "}}", valor)
+  end
+
+  return conteudo
+end
+
+function M.carregar_template(caminho_template, nome)
+  local file = io.open(caminho_template, "r")
+
+  if not file then
+    return nil
+  end
+
+  local conteudo = file:read("*a")
+  file:close()
+
+  return conteudo:gsub("{{name}}", nome)
+end
+
 return M

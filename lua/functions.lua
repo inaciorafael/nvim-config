@@ -1,4 +1,5 @@
 local M = {}
+local utils = require('./utils')
 
 function M.switch_case()
   local line, col = unpack(vim.api.nvim_win_get_cursor(0))
@@ -29,33 +30,41 @@ local function criar_componente(nome)
   end
 
   local nvim_tree = require "nvim-tree.api"
-  local diretorio_atual = nvim_tree.tree.get_node_under_cursor().absolute_path
-  -- nvim-tree-api.fs.create()
+  local node = nvim_tree.tree.get_node_under_cursor()
+  local diretorio_atual = node and node.absolute_path or vim.fn.getcwd()
 
-  print("diretorio_atual", diretorio_atual)
-
-  if not diretorio_atual then
-    diretorio_atual = vim.fn.getcwd()
-  end
-
-  local arquivos = {
-    diretorio_atual .. "/" .. nome .. ".component.ts",
-    diretorio_atual .. "/" .. nome .. ".model.ts",
-    diretorio_atual .. "/" .. nome .. ".styles.css",
-    diretorio_atual .. "/" .. 'index.ts',
+  local templates = {
+    { caminho_template = utils.get_nvim_path "/templates/rgc/component.tsx", extensao = ".component.tsx" },
+    { caminho_template = utils.get_nvim_path "/templates/rgc/model.ts", extensao = ".model.ts" },
+    { caminho_template = utils.get_nvim_path "/templates/rgc/styles.css", extensao = ".styles.css" },
+    { caminho_template = utils.get_nvim_path "/templates/rgc/index.ts", extensao = "index.ts" },
   }
 
-  for _, arquivo in ipairs(arquivos) do
-    local file = io.open(arquivo, "w")
+  for _, template in ipairs(templates) do
+    local conteudo = utils.carregar_template(template.caminho_template, nome)
+    conteudo = utils.substituir_placeholders(conteudo, { name = nome })
+
+    if not conteudo then
+      print("Erro ao carregar o template: " .. template.caminho_template)
+      return
+    end
+
+    local caminho_arquivo = diretorio_atual .. "/" .. nome .. template.extensao
+
+    if template.extensao == 'index.ts' then
+      caminho_arquivo = diretorio_atual .. "/" .. template.extensao
+    end
+
+    local file = io.open(caminho_arquivo, "w")
     if file then
-      file:write ""
+      file:write(conteudo)
       file:close()
     else
-      print("Erro ao criar o arquivo: " .. arquivo)
+      print("Erro ao criar o arquivo: " .. caminho_arquivo)
     end
   end
 
-  print("Arquivos do componente criados em " .. diretorio_atual .. ": " .. table.concat(arquivos, ", "))
+  print("Arquivos do componente criados em " .. diretorio_atual)
 end
 
 vim.api.nvim_create_user_command("Rgc", function(opts)
