@@ -8,7 +8,7 @@ const {{Name}}: React.FC<Page{{Name}}Props> = ({}) => {
   const { pageName } = use{{Name}}Model()
 
   return (
-    <div className="container">
+    <div className="{{name}}-container">
       <h1>{pageName} works!</h1>
     </div>
   );

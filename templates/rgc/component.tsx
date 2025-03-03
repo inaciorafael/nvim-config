@@ -5,7 +5,7 @@ import './{{name}}.styles.css';
 
 const {{Name}}: React.FC<{{Name}}Props> = ({}) => {
   return (
-    <div className="container">
+    <div className="{{name}}-container">
       <h1>{{name}} works!</h1>
     </div>
   );
