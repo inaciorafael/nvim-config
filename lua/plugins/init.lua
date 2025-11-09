@@ -359,6 +359,13 @@ local plugins = {
     cmd = "Atone",
     opts = {},
   },
+  -- Tradutor de errors typescript
+  {
+    "dmmulroy/ts-error-translator.nvim",
+    config = function()
+      require "plugins.configs.ts-error-translator"
+    end,
+  },
 }
 
 require("lazy").setup(plugins, require "lazy_config")
