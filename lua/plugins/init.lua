@@ -353,6 +353,12 @@ local plugins = {
       require "plugins.configs.peek"
     end,
   },
+  {
+    -- Lista de alterações de código uma especie de histórico para consultar depois
+    "XXiaoA/atone.nvim",
+    cmd = "Atone",
+    opts = {},
+  },
 }
 
 require("lazy").setup(plugins, require "lazy_config")

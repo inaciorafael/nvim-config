@@ -56,8 +56,59 @@ lspconfig.lua_ls.setup {
   },
 }
 
+-- -- Função de formatação
+-- local format_on_save = function(client, bufnr)
+--   if client.supports_method "textDocument/formatting" then
+--     vim.api.nvim_create_autocmd("BufWritePre", {
+--       buffer = bufnr,
+--       callback = function()
+--         vim.lsp.buf.format { async = false }
+--       end,
+--     })
+--   end
+-- end
+
+lspconfig.biome.setup {
+  cmd = { "biome", "lsp-proxy" },
+  filetypes = {
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact",
+    "vue",
+    "svelte",
+    "astro",
+    "css",
+    "scss",
+    "html",
+    "json",
+    "jsonc",
+    "graphql",
+  },
+  root_dir = lspconfig.util.root_pattern("biome.json", "package.json", ".git"),
+  settings = {}, -- Biome não precisa de config extra por enquanto
+  -- on_attach = function(client, bufnr)
+  --   format_on_save(client, bufnr)
+  -- end,
+}
+
+vim.lsp.config("vue_ls", {
+  filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
+  init_options = {
+    vue = {
+      hybridMode = false,
+    },
+  },
+})
+
+vim.lsp.config["ts_ls"] = {}
+
+lspconfig.pyright.setup {
+  capabilities = capabilities,
+}
+
 -- setup multiple servers with same default options
-local servers = { "tsserver", "html", "cssls", "tailwindcss", "pyright", "astro", "angularls" }
+local servers = { "ts_ls", "emmet_ls", "vuels", "html", "cssls", "tailwindcss", "pyright", "astro", "angularls" }
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
