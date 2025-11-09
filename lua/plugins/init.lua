@@ -366,6 +366,19 @@ local plugins = {
       require "plugins.configs.ts-error-translator"
     end,
   },
+  {
+    "tzachar/highlight-undo.nvim",
+    config = function()
+      require "plugins.configs.hightlight-undo"
+    end,
+  },
+  {
+    "chrisgrieser/nvim-scissors",
+    dependencies = { "nvim-telescope/telescope.nvim" }, -- apenas se quiser integrar com o Telescope
+    -- opts = {
+    --   snippetDir = vim.fn.stdpath "lua" .. "/snippets",
+    -- },
+  },
 }
 
 require("lazy").setup(plugins, require "lazy_config")

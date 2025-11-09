@@ -87,3 +87,7 @@ local function open_undotree()
 end
 
 map("n", "<leader>u", open_undotree, { noremap = true, silent = true })
+
+-- (Scissor) criar snippets e editar em tempo real
+map("n", "<leader>sa", function() require("scissors").addNewSnippet() end, { desc = "Snippet: Add" })
+map("n", "<leader>se", function() require("scissors").editSnippet() end, { desc = "Snippet: Edit" })
