@@ -30,6 +30,30 @@ vim.api.nvim_create_user_command("GitTimeline", function()
   require("git-timeline").show_history()
 end, {})
 
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = { "*.js", "*.ts", "*.tsx", "*.jsx", "*.json" },
+  callback = function(args)
+    vim.lsp.buf.format({ async = false })
+  end,
+})
+
+-- Auto-run Biome on save if biome.json exists
+-- vim.api.nvim_create_autocmd("BufWritePost", {
+--   pattern = "*",
+--   callback = function()
+--     -- Encontra o root do projeto
+--     local root = vim.fn.findfile("biome.json", ".;")
+--     if root ~= "" then
+--       -- Roda o Biome para o arquivo atual
+--       local file = vim.fn.expand("%:p")
+--       vim.fn.jobstart({ "biome", "check", "--write", "--unsafe", file }, {
+--         stdout_buffered = true,
+--         stderr_buffered = true,
+--       })
+--     end
+--   end,
+-- })
+
 -- mason, write correct names only
 vim.api.nvim_create_user_command("MasonInstallAll", function()
   vim.cmd "MasonInstall css-lsp html-lsp lua-language-server typescript-language-server stylua prettier tailwindcss-language-server emmet-language-server pyright black"

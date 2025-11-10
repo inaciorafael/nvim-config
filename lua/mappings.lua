@@ -64,8 +64,9 @@ map("n", "S", "<cmd> HopChar1 <CR>", { noremap = true, silent = true })
 -- Todo comments
 map("n", "tl", "<cmd> TodoTelescope <CR>")
 
--- Undotree
--- Verificar se o NvimTree está visível
+-- Atone
+local history_nvim_tree_open = false
+
 local function is_nvim_tree_open()
   for _, buf in ipairs(vim.api.nvim_list_bufs()) do
     local buf_name = vim.api.nvim_buf_get_name(buf)
@@ -82,7 +83,11 @@ local function open_undotree()
     vim.cmd "NvimTreeClose"
   end
 
-  vim.cmd "UndotreeToggle"
+  vim.cmd "Atone toggle"
 end
 
 map("n", "<leader>u", open_undotree, { noremap = true, silent = true })
+
+-- (Scissor) criar snippets e editar em tempo real
+map("n", "<leader>sa", function() require("scissors").addNewSnippet() end, { desc = "Snippet: Add" })
+map("n", "<leader>se", function() require("scissors").editSnippet() end, { desc = "Snippet: Edit" })

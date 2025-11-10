@@ -372,6 +372,34 @@ local plugins = {
       })
     end,
   },
+  {
+    -- Lista de alterações de código uma especie de histórico para consultar depois
+    "XXiaoA/atone.nvim",
+    cmd = "Atone",
+    opts = {},
+  },
+  -- Tradutor de errors typescript
+  {
+    "dmmulroy/ts-error-translator.nvim",
+    config = function()
+      require "plugins.configs.ts-error-translator"
+    end,
+  },
+  {
+    "tzachar/highlight-undo.nvim",
+    config = function()
+      require "plugins.configs.hightlight-undo"
+    end,
+  },
+  {
+    "chrisgrieser/nvim-scissors",
+    dependencies = { "nvim-telescope/telescope.nvim" }, -- apenas se quiser integrar com o Telescope
+  },
+  { "jinh0/eyeliner.nvim",
+    config = function ()
+      require('plugins.configs.eyeliner')
+    end
+  },
 }
 
 require("lazy").setup(plugins, require "lazy_config")
