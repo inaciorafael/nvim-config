@@ -57,7 +57,7 @@ lspconfig.lua_ls.setup {
 }
 
 -- setup multiple servers with same default options
-local servers = { "tsserver", "html", "cssls", "tailwindcss", "pyright", "astro", "angularls" }
+local servers = { "ts_ls", "html", "cssls", "tailwindcss", "pyright", "astro", "angularls" }
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
