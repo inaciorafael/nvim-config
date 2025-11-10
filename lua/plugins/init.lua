@@ -375,9 +375,11 @@ local plugins = {
   {
     "chrisgrieser/nvim-scissors",
     dependencies = { "nvim-telescope/telescope.nvim" }, -- apenas se quiser integrar com o Telescope
-    -- opts = {
-    --   snippetDir = vim.fn.stdpath "lua" .. "/snippets",
-    -- },
+  },
+  { "jinh0/eyeliner.nvim",
+    config = function ()
+      require('plugins.configs.eyeliner')
+    end
   },
 }
 

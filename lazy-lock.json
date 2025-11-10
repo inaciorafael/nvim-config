@@ -13,6 +13,7 @@
   "cmp_luasnip": { "branch": "master", "commit": "05a9ab28b53f71d1aece421ef32fee2cb857a843" },
   "conform.nvim": { "branch": "master", "commit": "40d4e98fcc3e6f485f0e8924c63734bc7e305967" },
   "everforest": { "branch": "master", "commit": "87b8554b2872ef69018d4b13d288756dd4e47c0f" },
+  "eyeliner.nvim": { "branch": "main", "commit": "8f197eb30cecdf4c2cc9988a5eecc6bc34c0c7d6" },
   "fidget.nvim": { "branch": "main", "commit": "d855eed8a06531a7e8fd0684889b2943f373c469" },
   "friendly-snippets": { "branch": "main", "commit": "de8fce94985873666bd9712ea3e49ee17aadb1ed" },
   "git-blame.nvim": { "branch": "master", "commit": "2883a7460f611c2705b23f12d58d398d5ce6ec00" },
