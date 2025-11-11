@@ -400,7 +400,22 @@ local plugins = {
     config = function()
       require "plugins.configs.eyeliner"
     end,
-  }
+  },
+  {
+    "chrisgrieser/nvim-rip-substitute",
+    cmd = "RipSubstitute",
+    opts = {},
+    keys = {
+      {
+        "<leader>fs",
+        function()
+          require("rip-substitute").sub()
+        end,
+        mode = { "n", "x" },
+        desc = " rip substitute",
+      },
+    },
+  },
 }
 
 require("lazy").setup(plugins, require "lazy_config")
