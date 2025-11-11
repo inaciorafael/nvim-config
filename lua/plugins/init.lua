@@ -376,10 +376,26 @@ local plugins = {
     "chrisgrieser/nvim-scissors",
     dependencies = { "nvim-telescope/telescope.nvim" }, -- apenas se quiser integrar com o Telescope
   },
-  { "jinh0/eyeliner.nvim",
-    config = function ()
-      require('plugins.configs.eyeliner')
-    end
+  {
+    "jinh0/eyeliner.nvim",
+    config = function()
+      require "plugins.configs.eyeliner"
+    end,
+  },
+  {
+    "chrisgrieser/nvim-rip-substitute",
+    cmd = "RipSubstitute",
+    opts = {},
+    keys = {
+      {
+        "<leader>fs",
+        function()
+          require("rip-substitute").sub()
+        end,
+        mode = { "n", "x" },
+        desc = " rip substitute",
+      },
+    },
   },
 }
 
