@@ -1,3 +1,35 @@
+vim.api.nvim_create_user_command("FixImports", function()
+  local buf = vim.api.nvim_get_current_buf()
+  local fname = vim.api.nvim_buf_get_name(buf)
+
+  vim.lsp.buf.execute_command {
+    command = "_typescript.organizeImports",
+    arguments = { vim.api.nvim_buf_get_name(buf) },
+  }
+
+  -- 2️⃣ Espera um pouco para garantir que LSP terminou
+  vim.defer_fn(function()
+    -- 3️⃣ Roda ESLint --fix
+    vim.fn.jobstart({ "npx", "eslint", "--fix", fname }, {
+      on_exit = function(_, code, _)
+        if code == 0 then
+          vim.schedule(function()
+            vim.notify("Imports organizados e ESLint aplicado!", vim.log.levels.INFO)
+          end)
+        else
+          vim.schedule(function()
+            vim.notify("Erro ao rodar ESLint", vim.log.levels.ERROR)
+          end)
+        end
+      end,
+    })
+  end, 200) -- espera 200ms
+end, { desc = "Organize imports + fix eslint" })
+
+vim.api.nvim_create_user_command("GitTimeline", function()
+  require("git-timeline").show_history()
+end, {})
+
 vim.api.nvim_create_autocmd("BufWritePre", {
   pattern = { "*.js", "*.ts", "*.tsx", "*.jsx", "*.json" },
   callback = function(args)
@@ -28,7 +60,7 @@ vim.api.nvim_create_user_command("MasonInstallAll", function()
 end, {})
 
 vim.api.nvim_create_user_command("TSInstallAll", function()
-  vim.cmd "TSInstall css tsx json html lua javascript typescript markdown python"
+  vim.cmd "TSInstall css yaml xml tsx json html lua javascript typescript markdown python"
 end, {})
 
 vim.api.nvim_create_user_command("S", function()
