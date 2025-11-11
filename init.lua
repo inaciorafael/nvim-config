@@ -21,4 +21,5 @@ vim.opt.rtp:prepend(lazypath)
 require "plugins"
 
 -- vim.cmd "colorscheme nightfox"
-vim.cmd.colorscheme "everforest"
+-- vim.cmd.colorscheme "everforest"
+vim.cmd.colorscheme "oldworld"
