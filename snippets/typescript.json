@@ -1,0 +1,1 @@
+{"useState + ste":{"prefix":["useState","ste"],"body":"const [${1:name}, set${1:Name}] = useState<${2:type}>(${3:default_value})"}}

@@ -1,6 +1,14 @@
 local cmp = require "cmp"
+local luasnip = require('luasnip')
 
 cmp.setup {
+  enabled = function()
+    -- desativa CMP enquanto você está dentro de um snippet
+    if luasnip.in_snippet() then
+      return false
+    end
+    return true
+  end,
   snippet = {
     expand = function(args)
       require("luasnip").lsp_expand(args.body)

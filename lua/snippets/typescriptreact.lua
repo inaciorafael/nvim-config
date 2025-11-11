@@ -8,6 +8,11 @@ local function to_uppercase(args)
   return args[1][1]:upper()
 end
 
+local function capitalize(args)
+  local word = args[1][1] or ""
+  return word:sub(1, 1):upper() .. word:sub(2)
+end
+
 return {
   s(
     "tscomponent",
@@ -118,4 +123,19 @@ return {
       f(to_uppercase, { 1 })
     )
   ),
+    s(
+    "us",
+    fmt(
+      [[
+const [{}, set{}] = useState<{}>({});
+    ]],
+      {
+        i(1, "state"),
+        f(capitalize, { 1 }), -- transforma o placeholder
+        i(2, "Type"),
+        i(3, "default_value"),
+      }
+    )
+  ),
+
 }
