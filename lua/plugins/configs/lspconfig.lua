@@ -46,6 +46,7 @@ capabilities.textDocument.completion.completionItem = {
 }
 -- Setup language servers.
 local lspconfig = require "lspconfig"
+-- local lspconfig = vim.lsp.config
 
 lspconfig.lua_ls.setup {
   capabilities = capabilities,

@@ -279,13 +279,6 @@ local plugins = {
     },
   },
   {
-    "mbbill/undotree",
-    cmd = "UndotreeToggle", -- Carrega o plugin somente quando o comando for executado
-    config = function()
-      require "plugins.configs.undotree"
-    end,
-  },
-  {
     "m4xshen/hardtime.nvim",
     dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
     config = function()
@@ -628,8 +621,8 @@ local plugins = {
     "Dan7h3x/LazyDo",
     branch = "main",
     cmd = { "LazyDoToggle", "LazyDoPin", "LazyDoToggleStorage" },
-    config = function ()
-      require('plugins.configs.lazydo')
+    config = function()
+      require "plugins.configs.lazydo"
     end,
     keys = { -- recommended keymap for easy toggle LazyDo in normal and insert modes (arbitrary)
       {
@@ -640,6 +633,7 @@ local plugins = {
     },
     event = "VeryLazy",
   },
+  { "MunifTanjim/nui.nvim" },
 }
 
 require("lazy").setup(plugins, require "lazy_config")
