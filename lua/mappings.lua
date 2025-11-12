@@ -1,11 +1,11 @@
 local map = vim.keymap.set
 local default_opts = { noremap = true }
 
-local functions = require('functions')
+local functions = require "functions"
 
 vim.g.mapleader = " "
 
-map('n', '<C-s>', functions.switch_case, default_opts)
+map("n", "<C-s>", functions.switch_case, default_opts)
 
 -- general mappings
 -- map("n", "<C-s>", "<cmd> w <CR>")
@@ -89,5 +89,17 @@ end
 map("n", "<leader>u", open_undotree, { noremap = true, silent = true })
 
 -- (Scissor) criar snippets e editar em tempo real
-map("n", "<leader>sa", function() require("scissors").addNewSnippet() end, { desc = "Snippet: Add" })
-map("n", "<leader>se", function() require("scissors").editSnippet() end, { desc = "Snippet: Edit" })
+map("n", "<leader>sa", function()
+  require("scissors").addNewSnippet()
+end, { desc = "Snippet: Add" })
+map("n", "<leader>se", function()
+  require("scissors").editSnippet()
+end, { desc = "Snippet: Edit" })
+
+-- (Macroni)
+map({ "n", "v" }, "<leader>m", function()
+  require("telescope").extensions.macroni.saved_macros()
+end)
+
+-- lazydo
+map({ "n", "v" }, "td", "<cmd> LazyDoToggle <CR>")

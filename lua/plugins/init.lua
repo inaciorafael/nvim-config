@@ -607,6 +607,39 @@ local plugins = {
       })
     end,
   },
+  {
+    "mawkler/jsx-element.nvim",
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-treesitter/nvim-treesitter-textobjects",
+    },
+    ft = { "typescriptreact", "javascriptreact", "javascript" },
+    opts = {},
+  },
+  {
+    "jesseleite/nvim-macroni",
+    config = function()
+      require "plugins.configs.nvim-macroni"
+    end,
+    lazy = false,
+  },
+
+  {
+    "Dan7h3x/LazyDo",
+    branch = "main",
+    cmd = { "LazyDoToggle", "LazyDoPin", "LazyDoToggleStorage" },
+    config = function ()
+      require('plugins.configs.lazydo')
+    end,
+    keys = { -- recommended keymap for easy toggle LazyDo in normal and insert modes (arbitrary)
+      {
+        "<F2>",
+        "<ESC><CMD>LazyDoToggle<CR>",
+        mode = { "n", "i" },
+      },
+    },
+    event = "VeryLazy",
+  },
 }
 
 require("lazy").setup(plugins, require "lazy_config")

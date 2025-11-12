@@ -22,7 +22,21 @@ require("lualine").setup {
     lualine_b = { "branch", "diff", "diagnostics" },
     lualine_c = { "filename" },
     -- lualine_c = { "filename", "lsp_progress" },
-    lualine_x = { "encoding", "fileformat", "filetype" },
+    lualine_x = {
+      "encoding",
+      "fileformat",
+      "filetype",
+      {
+        -- lazydo integration
+        function()
+          return require("lazydo").get_lualine_stats()
+        end,
+        cond = function()
+          return require("lazydo")._initialized
+        end,
+        color = { fg = "#a6e3a1", gui = "bold" }, -- opcional: cor custom
+      },
+    },
     lualine_y = { "progress" },
     lualine_z = { "location" },
   },
