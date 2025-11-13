@@ -7,9 +7,9 @@ vim.lsp.config["lua_ls"] = {
       runtime = {
         version = "LuaJIT",
       },
-      diagnostics = {
-        globals = { "vim" },
-      },
+      -- diagnostics = {
+      --   globals = { "vim" },
+      -- },
     },
   },
 }
