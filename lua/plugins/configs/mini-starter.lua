@@ -3,7 +3,7 @@ local starter = require("mini.starter")
 local function restore_session()
   require("persistence").load() -- Load session
 
-  vim.cmd(":NvimTreeToggle") -- Open NvimTree
+  -- vim.cmd(":NvimTreeToggle") -- Open NvimTree
   vim.api.nvim_command("wincmd l") -- Move to right buffer
 end
 

@@ -19,8 +19,8 @@ map("n", "<C-j>", "<C-w>j")
 map("n", "<C-k>", "<C-w>k")
 
 -- nvimtree
-map("n", "<leader>e", "<cmd> NvimTreeToggle <CR>")
-map("n", "<C-f>", "<cmd> NvimTreeFindFile <CR>")
+map("n", "<leader>e", "<cmd> Neotree toggle <CR>")
+map("n", "<C-f>", "<cmd> Neotree reveal <CR>")
 
 -- telescope
 local function find_files()

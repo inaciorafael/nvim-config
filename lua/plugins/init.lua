@@ -8,13 +8,13 @@ local plugins = {
   },
 
   -- file tree
-  {
-    "nvim-tree/nvim-tree.lua",
-    cmd = { "NvimTreeToggle", "NvimTreeFocus" },
-    config = function()
-      require("nvim-tree").setup()
-    end,
-  },
+  -- {
+  --   "nvim-tree/nvim-tree.lua",
+  --   cmd = { "NvimTreeToggle", "NvimTreeFocus" },
+  --   config = function()
+  --     require("nvim-tree").setup()
+  --   end,
+  -- },
 
   -- icons, for UI related plugins
   {
@@ -628,6 +628,16 @@ local plugins = {
     event = "VeryLazy",
   },
   { "MunifTanjim/nui.nvim" },
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "MunifTanjim/nui.nvim",
+      "nvim-tree/nvim-web-devicons", -- optional, but recommended
+    },
+    lazy = false, -- neo-tree will lazily load itself
+  },
 }
 
 require("lazy").setup(plugins, require "lazy_config")
