@@ -638,6 +638,16 @@ local plugins = {
     },
     lazy = false, -- neo-tree will lazily load itself
   },
+  {
+    "stevearc/aerial.nvim",
+    opts = {},
+    -- Optional dependencies
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-tree/nvim-web-devicons",
+    },
+  },
+  { "rebelot/kanagawa.nvim" },
 }
 
 require("lazy").setup(plugins, require "lazy_config")

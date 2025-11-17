@@ -1,0 +1,1716 @@
+--- Startup times for process: Primary (or UI client) ---
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.001  000.001: --- NVIM STARTING ---
+000.107  000.107: event init
+000.173  000.066: early init
+000.206  000.033: locale set
+000.252  000.046: init first window
+000.507  000.255: inits 1
+000.513  000.006: window checked
+000.515  000.002: parsing arguments
+000.837  000.028  000.028: require('vim.shared')
+000.897  000.025  000.025: require('vim.inspect')
+000.926  000.024  000.024: require('vim._options')
+000.928  000.088  000.039: require('vim._editor')
+000.928  000.135  000.019: require('vim._init_packages')
+000.929  000.279: init lua interpreter
+003.021  002.091: nvim_ui_attach
+003.302  000.281: nvim_set_client_info
+003.304  000.002: --- NVIM STARTED ---
+
+--- Startup times for process: Embedded ---
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.000  000.000: --- NVIM STARTING ---
+000.076  000.075: event init
+000.126  000.051: early init
+000.152  000.026: locale set
+000.177  000.025: init first window
+000.389  000.211: inits 1
+000.396  000.007: window checked
+000.397  000.001: parsing arguments
+000.784  000.031  000.031: require('vim.shared')
+000.863  000.025  000.025: require('vim.inspect')
+000.921  000.053  000.053: require('vim._options')
+000.922  000.136  000.058: require('vim._editor')
+000.923  000.201  000.034: require('vim._init_packages')
+000.924  000.327: init lua interpreter
+000.970  000.046: expanding arguments
+000.987  000.017: inits 2
+001.176  000.189: init highlight
+001.176  000.001: waiting for UI
+001.284  000.108: done waiting for UI
+001.290  000.006: clear screen
+001.425  000.008  000.008: require('vim.keymap')
+001.960  000.085  000.085: sourcing nvim_exec2()
+003.730  001.704  001.704: require('vim.termcap')
+003.762  000.014  000.014: require('vim.text')
+003.835  002.542  000.732: require('vim._defaults')
+003.837  000.005: init default mappings & autocommands
+004.476  000.618  000.618: sourcing /usr/share/nvim/runtime/ftplugin.vim
+005.097  000.591  000.591: sourcing /usr/share/nvim/runtime/indent.vim
+006.086  000.407  000.407: sourcing /usr/share/nvim/archlinux.lua
+006.090  000.968  000.561: sourcing /etc/xdg/nvim/sysinit.vim
+007.525  000.940  000.940: require('commands')
+008.771  000.341  000.341: require('./utils')
+008.779  000.670  000.329: require('functions')
+008.928  001.401  000.731: require('mappings')
+009.270  000.340  000.340: require('options')
+011.336  000.051  000.051: require('vim.fs')
+011.357  000.485  000.434: require('vim.lsp.log')
+013.080  001.721  001.721: require('vim.lsp.protocol')
+015.016  001.931  001.931: require('vim.lsp.util')
+016.349  000.715  000.715: require('vim.lsp.sync')
+016.355  001.335  000.620: require('vim.lsp._changetracking')
+017.728  000.515  000.515: require('vim.lsp._transport')
+017.744  001.387  000.872: require('vim.lsp.rpc')
+017.765  008.173  001.313: require('vim.lsp')
+017.780  008.507  000.334: require('lsp')
+019.195  000.422  000.422: require('lazy')
+019.514  000.316  000.316: require('lazy_config')
+019.556  000.025  000.025: require('ffi')
+019.892  000.314  000.314: require('vim.uri')
+019.905  000.346  000.032: require('vim.loader')
+020.742  000.822  000.822: require('lazy.stats')
+021.153  000.392  000.392: require('lazy.core.util')
+021.665  000.509  000.509: require('lazy.core.config')
+022.390  000.393  000.393: require('lazy.core.handler')
+023.530  000.320  000.320: require('lazy.pkg')
+023.534  000.805  000.485: require('lazy.core.meta')
+023.541  001.148  000.343: require('lazy.core.plugin')
+023.547  001.878  000.337: require('lazy.core.loader')
+024.257  000.521  000.521: require('lazy.core.fragments')
+028.605  000.451  000.451: require('lazy.core.handler.event')
+028.989  000.377  000.377: require('lazy.core.handler.cmd')
+029.387  000.394  000.394: require('lazy.core.handler.ft')
+029.948  000.554  000.554: require('lazy.core.handler.keys')
+030.608  000.009  000.009: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+030.620  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+031.492  000.073  000.073: sourcing nvim_exec2() called at /usr/share/nvim/runtime/filetype.lua:0
+031.495  000.582  000.510: sourcing /usr/share/nvim/runtime/filetype.lua
+031.498  000.606  000.024: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+032.810  000.004  000.004: sourcing nvim_exec2() called at ColorSchemePre Autocommands for "*":0
+032.816  000.001  000.001: sourcing nvim_exec2() called at ColorSchemePre Autocommands for "*":0
+034.674  000.403  000.403: require('poimandres.utils')
+034.677  001.858  001.455: require('poimandres')
+036.030  000.592  000.592: require('poimandres.theme')
+036.316  000.282  000.282: require('poimandres.palette')
+036.412  000.010  000.010: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.417  000.002  000.002: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.453  000.034  000.034: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.474  000.017  000.017: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.480  000.002  000.002: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.484  000.002  000.002: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.530  000.003  000.003: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.544  000.011  000.011: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.547  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.553  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.556  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.558  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.561  000.002  000.002: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.563  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.566  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.568  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.571  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.574  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.576  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.620  000.003  000.003: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.623  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.640  000.002  000.002: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.643  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.646  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.648  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.650  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.653  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.656  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.677  000.002  000.002: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.680  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.683  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.686  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.688  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.713  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.715  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.717  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.721  000.002  000.002: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.723  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.726  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.728  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.730  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.735  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.737  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.740  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.742  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.744  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.746  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.748  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.750  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.752  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.754  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.756  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.759  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.761  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.792  000.002  000.002: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.795  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.797  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.799  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.833  000.002  000.002: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.836  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.838  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.853  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.855  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.857  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.858  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.860  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.862  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.864  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.865  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.867  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.869  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.871  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.873  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.875  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.877  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.879  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.883  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.885  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.890  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.893  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.895  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.897  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.898  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.900  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.902  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.905  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.908  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.910  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.912  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.914  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.916  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.917  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.919  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.950  000.029  000.029: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.952  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.957  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.959  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.967  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.969  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.970  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.973  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.975  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.977  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.979  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.981  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.982  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.984  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.986  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.987  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.989  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.992  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.994  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.997  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+036.999  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.003  000.002  000.002: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.006  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.009  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.012  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.024  000.002  000.002: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.027  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.071  000.002  000.002: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.098  000.002  000.002: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.101  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.104  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.106  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.128  000.002  000.002: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.155  000.002  000.002: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.158  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.173  000.002  000.002: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.176  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.178  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.180  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.183  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.186  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.189  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.204  000.002  000.002: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.207  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.211  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.214  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.216  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.218  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.221  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.223  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.226  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.228  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.230  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.233  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.274  000.007  000.007: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.277  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.291  000.002  000.002: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.294  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.297  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.300  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.302  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.304  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.306  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.308  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.310  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.312  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.316  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.318  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.326  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.328  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.330  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.332  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.334  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.335  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.337  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.339  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.342  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.344  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.346  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.348  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.351  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.353  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.355  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.358  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.361  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.362  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.365  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.367  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.369  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.371  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.372  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.374  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.376  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.378  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.380  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.383  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.385  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.387  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.389  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.391  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.394  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.396  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.398  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.400  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.402  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.403  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.406  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.408  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.409  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.412  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.413  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.415  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.417  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.419  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.421  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.423  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.425  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.428  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.430  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.432  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.433  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.435  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.437  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.440  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.442  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.486  000.002  000.002: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.489  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.491  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.509  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.511  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.513  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.515  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.528  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.530  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.532  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.535  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.537  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.539  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.540  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.543  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.544  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.548  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.550  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.551  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.553  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.555  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.558  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.561  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.563  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.565  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.567  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.569  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.570  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.574  000.002  000.002: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.576  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.577  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.580  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.581  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.583  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.585  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.603  000.017  000.017: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.605  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.607  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.610  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.612  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.614  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.616  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.618  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.620  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.622  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.623  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.625  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.627  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.629  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.630  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.632  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.634  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.637  000.002  000.002: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.640  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.643  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.647  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.649  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.651  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.653  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.655  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.657  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.660  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.662  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.664  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.666  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.713  000.002  000.002: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.716  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.719  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.721  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.723  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.725  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.734  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.749  000.002  000.002: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.752  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.754  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.755  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.757  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.761  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.764  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.766  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.768  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.771  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.773  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.775  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.777  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.779  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.781  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.783  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.786  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.788  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.791  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.793  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.795  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.798  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.800  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.803  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.805  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.808  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.810  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.812  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.815  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.817  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.819  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.821  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.823  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.825  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.827  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.829  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.832  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.834  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.837  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.839  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.841  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.843  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.845  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.847  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.849  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.851  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.854  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.856  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.858  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.862  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.864  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.866  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.868  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.871  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.873  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.876  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.878  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.880  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.882  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.885  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.887  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.890  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.892  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.900  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.902  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.903  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.905  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.908  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.910  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.912  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.915  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.917  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.921  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.923  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.924  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.927  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.929  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.931  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.933  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.936  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.938  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.940  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.942  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.944  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.946  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.948  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.950  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.952  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.955  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.958  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.960  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.962  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.964  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.966  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.968  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.970  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.972  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.974  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.976  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.979  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.981  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.983  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.987  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.990  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.992  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.995  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.997  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+037.999  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+038.001  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+038.003  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+038.005  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+038.023  000.016  000.016: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+038.028  000.002  000.002: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+038.031  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+038.036  000.002  000.002: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+038.039  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+038.041  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+038.045  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+038.048  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+038.051  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+038.053  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+038.057  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+038.059  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+038.060  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+038.063  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+038.065  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+038.068  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+038.076  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+038.078  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+038.080  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+038.082  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+038.083  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+038.085  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+038.087  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+038.089  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+038.091  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+038.093  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+038.095  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+038.137  000.041  000.041: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+038.141  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+038.143  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+038.145  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+038.147  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+038.149  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+038.151  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+038.153  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+038.155  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+038.157  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+038.159  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+038.161  002.995  001.494: sourcing /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua
+038.165  006.617  001.759: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+038.337  000.003  000.003: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+038.345  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+039.104  000.277  000.277: sourcing /root/.local/share/nvim/lazy/nightfox.nvim/plugin/nightfox.vim
+039.109  000.302  000.025: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+039.116  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+039.132  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+041.374  000.343  000.343: require('nightfox.lib.collect')
+041.696  000.318  000.318: require('nightfox.util')
+041.809  001.279  000.618: require('nightfox.config')
+041.814  001.801  000.521: require('nightfox')
+042.126  000.311  000.311: require('nightfox.override')
+042.761  000.323  000.323: require('nightfox.lib.hash')
+042.856  000.005  000.005: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+042.865  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+043.049  000.003  000.003: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+043.056  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+045.172  001.825  001.825: require('boole')
+045.245  002.186  000.361: require('plugins.configs.boole')
+046.317  000.307  000.307: sourcing /root/.local/share/nvim/lazy/bufdelete.nvim/plugin/bufdelete.lua
+046.322  000.333  000.026: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+046.330  000.003  000.003: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+046.340  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+048.321  001.223  001.223: require('trim.trimmer')
+048.329  001.503  000.280: sourcing /root/.local/share/nvim/lazy/trim.nvim/plugin/trim.lua
+048.332  001.526  000.023: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+048.340  000.003  000.003: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+048.350  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+049.166  000.282  000.282: require('trim.config')
+049.171  000.565  000.283: require('trim')
+049.189  000.837  000.272: require('plugins.configs.trim')
+049.987  000.269  000.269: sourcing /root/.local/share/nvim/lazy/plenary.nvim/plugin/plenary.vim
+049.992  000.298  000.028: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+050.031  000.003  000.003: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+050.043  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+050.180  000.002  000.002: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+050.197  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+050.959  000.272  000.272: sourcing /root/.local/share/nvim/lazy/nvim-web-devicons/plugin/nvim-web-devicons.vim
+050.964  000.314  000.043: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+050.972  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+050.984  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+052.759  000.463  000.463: require('nvim-web-devicons.filetypes')
+052.777  000.004  000.004: require('vim.F')
+054.072  000.835  000.835: require('nvim-web-devicons.default.icons_by_filename')
+055.101  001.026  001.026: require('nvim-web-devicons.default.icons_by_file_extension')
+055.837  000.733  000.733: require('nvim-web-devicons.default.icons_by_operating_system')
+056.298  000.459  000.459: require('nvim-web-devicons.default.icons_by_desktop_environment')
+056.795  000.494  000.494: require('nvim-web-devicons.default.icons_by_window_manager')
+056.797  004.012  000.466: require('nvim-web-devicons.icons-default')
+057.026  006.006  001.526: require('nvim-web-devicons')
+059.852  000.515  000.515: sourcing /root/.local/share/nvim/lazy/neo-tree.nvim/plugin/neo-tree.lua
+059.856  000.539  000.024: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+059.862  000.002  000.002: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+059.870  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+063.698  000.361  000.361: require('nvim-treesitter.utils')
+066.336  000.316  000.316: require('vim.treesitter.language')
+066.568  000.228  000.228: require('vim.func')
+066.772  000.200  000.200: require('vim.func._memoize')
+066.800  001.104  000.361: require('vim.treesitter.query')
+067.035  000.233  000.233: require('vim.treesitter._range')
+067.049  001.847  000.509: require('vim.treesitter.languagetree')
+067.053  002.554  000.707: require('vim.treesitter')
+067.425  003.724  001.170: require('nvim-treesitter.parsers')
+069.071  000.342  000.342: require('nvim-treesitter.compat')
+069.727  000.372  000.372: require('nvim-treesitter.ts_utils')
+069.732  000.659  000.287: require('nvim-treesitter.tsrange')
+070.054  000.320  000.320: require('nvim-treesitter.caching')
+070.064  001.797  000.476: require('nvim-treesitter.query')
+070.076  002.235  000.439: require('nvim-treesitter.configs')
+070.078  002.651  000.416: require('nvim-treesitter.info')
+070.346  000.248  000.248: require('nvim-treesitter.shell_command_selectors')
+070.367  007.487  000.502: require('nvim-treesitter.install')
+070.648  000.280  000.280: require('nvim-treesitter.statusline')
+070.860  000.210  000.210: require('nvim-treesitter.query_predicates')
+070.863  009.973  001.996: require('nvim-treesitter')
+071.138  000.270  000.270: require('vim.iter')
+071.747  011.301  001.058: sourcing /root/.local/share/nvim/lazy/nvim-treesitter/plugin/nvim-treesitter.lua
+071.752  011.323  000.022: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+071.759  000.002  000.002: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+071.770  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+073.079  000.364  000.364: require('nvim-treesitter.highlight')
+073.484  000.378  000.378: require('nvim-treesitter.indent')
+073.524  001.750  001.008: require('plugins.configs.treesitter')
+073.544  000.004  000.004: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+073.550  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+074.159  000.592  000.592: require('aerial')
+075.070  000.379  000.379: sourcing /root/.local/share/nvim/lazy/nvim-macroni/plugin/macroni.lua
+075.074  000.403  000.024: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+075.080  000.002  000.002: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+075.091  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+076.577  000.292  000.292: require('macroni.utils')
+076.585  001.089  000.797: require('macroni')
+076.593  001.499  000.409: require('plugins.configs.nvim-macroni')
+076.707  000.005  000.005: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+076.715  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+078.424  000.335  000.335: require('lualine_require')
+079.249  002.210  001.876: require('lualine')
+079.595  000.016  000.016: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+081.585  000.010  000.010: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+081.598  000.003  000.003: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+081.608  000.002  000.002: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+081.616  000.004  000.004: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+081.622  000.002  000.002: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+081.631  000.002  000.002: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+081.636  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+081.643  000.002  000.002: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+081.649  000.002  000.002: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+081.656  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+081.661  000.002  000.002: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+081.668  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+081.673  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+081.678  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+081.684  000.002  000.002: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+081.697  000.010  000.010: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+084.068  000.008  000.008: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+084.076  000.004  000.004: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+084.441  000.007  000.007: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+084.451  000.002  000.002: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+084.459  000.002  000.002: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+084.530  000.003  000.003: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+084.542  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+084.571  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+084.578  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+084.587  000.003  000.003: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+084.593  000.002  000.002: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+084.598  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+084.603  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+084.610  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+084.615  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+084.621  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+084.627  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+084.634  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+084.639  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+084.644  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+084.661  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+084.665  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+084.669  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+085.048  000.009  000.009: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+085.057  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+085.060  000.002  000.002: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+085.065  000.003  000.003: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+086.165  000.007  000.007: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+086.206  000.003  000.003: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+086.214  000.002  000.002: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+086.223  000.002  000.002: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+086.228  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+086.239  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+086.243  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+086.253  000.003  000.003: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+086.258  000.002  000.002: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+086.263  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+086.270  000.002  000.002: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+086.275  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+086.282  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+086.286  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+086.294  000.002  000.002: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+086.299  000.002  000.002: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+086.304  000.002  000.002: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+086.310  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+086.314  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+086.318  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+086.324  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+086.332  000.002  000.002: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+086.337  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+086.341  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+086.346  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+086.351  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+086.386  000.002  000.002: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+086.391  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+086.940  000.288  000.288: require('lualine.utils.mode')
+088.408  000.009  000.009: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+088.419  000.002  000.002: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+088.425  000.002  000.002: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+088.438  000.002  000.002: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+088.443  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+088.452  000.002  000.002: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+088.457  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+088.536  000.011  000.011: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+088.565  000.005  000.005: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+088.577  000.010  000.010: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+088.583  000.003  000.003: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+088.587  000.002  000.002: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+088.595  011.876  009.155: require('plugins.configs.lualine')
+088.697  000.002  000.002: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+088.709  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+090.700  001.611  001.611: require('mini.starter')
+090.835  002.122  000.511: require('plugins.configs.mini-starter')
+091.053  000.005  000.005: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+091.071  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+092.400  000.181  000.181: require('notifier.config')
+092.405  000.506  000.326: require('notifier.status')
+092.407  001.333  000.826: require('notifier')
+093.398  000.708  000.708: require('vim.lsp.completion')
+093.440  001.014  000.307: require('vim.lsp.handlers')
+093.528  000.003  000.003: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+093.535  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+094.899  000.211  000.211: require('fidget.spinner.patterns')
+094.902  000.393  000.183: require('fidget.spinner')
+095.413  000.325  000.325: require('fidget.health')
+095.415  000.511  000.186: require('fidget.options')
+095.419  001.055  000.151: require('fidget.progress.display')
+095.766  000.206  000.206: require('fidget.logger')
+095.770  000.350  000.144: require('fidget.progress.lsp')
+096.536  000.202  000.202: require('fidget.poll')
+096.552  000.418  000.216: require('fidget.notification.model')
+096.879  000.326  000.326: require('fidget.notification.window')
+097.127  000.245  000.245: require('fidget.notification.view')
+097.183  001.236  000.247: require('fidget.notification')
+097.186  001.415  000.179: require('fidget.progress.handle')
+097.197  003.031  000.211: require('fidget.progress')
+097.545  000.346  000.346: require('fidget.commands')
+098.031  000.224  000.224: require('fidget.integration.nvim-tree')
+098.234  000.200  000.200: require('fidget.integration.xcodebuild-nvim')
+098.239  000.691  000.267: require('fidget.integration')
+098.244  004.705  000.638: require('fidget')
+098.406  000.008  000.008: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+098.413  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+100.627  000.526  000.526: require('hardtime.config')
+101.107  000.476  000.476: require('hardtime.log')
+101.163  001.425  000.423: require('hardtime.util')
+101.178  002.411  000.986: require('hardtime')
+101.183  002.765  000.354: require('plugins.configs.hardtime')
+101.231  000.006  000.006: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+101.238  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+103.027  000.359  000.359: require('modes.utils')
+103.036  001.389  001.030: require('modes')
+103.087  000.008  000.008: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+103.091  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+103.093  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+103.096  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+103.103  000.004  000.004: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+103.107  000.002  000.002: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+103.109  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+103.112  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+103.115  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+103.117  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+103.120  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+103.122  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+103.125  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+103.127  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+103.130  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+103.133  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+103.135  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+103.138  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+103.140  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+103.142  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+103.146  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+103.148  000.002  000.002: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+103.151  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+103.224  001.982  000.555: require('plugins.configs.modes')
+103.259  000.002  000.002: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+103.264  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+104.520  000.208  000.208: require('arrow.config')
+104.729  000.207  000.207: require('arrow.utils')
+105.501  000.225  000.225: require('arrow.git')
+105.511  000.516  000.291: require('arrow.persist')
+105.737  000.223  000.223: require('arrow.integration.icons')
+105.742  001.011  000.271: require('arrow.ui')
+106.189  000.231  000.231: require('arrow.json')
+106.196  000.453  000.222: require('arrow.buffer_persist')
+106.597  000.258  000.258: require('arrow.buffer_ui')
+106.601  000.404  000.146: require('arrow.commands')
+106.823  000.221  000.221: require('arrow.save_keys')
+106.826  003.126  000.622: require('arrow')
+106.835  000.005  000.005: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+106.838  000.002  000.002: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+106.841  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+106.843  000.002  000.002: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+107.287  004.020  000.884: require('plugins.configs.arrow')
+108.755  000.150  000.150: require('eyeliner.config')
+109.247  000.151  000.151: require('eyeliner.utils')
+109.252  000.301  000.150: require('eyeliner.shared')
+109.764  000.144  000.144: require('eyeliner.string')
+109.768  000.353  000.209: require('eyeliner.liner')
+109.770  000.517  000.164: require('eyeliner.always-on')
+109.914  000.144  000.144: require('eyeliner.on-key')
+109.917  001.159  000.197: require('eyeliner.main')
+109.919  001.842  000.534: require('eyeliner')
+110.017  002.233  000.391: sourcing /root/.local/share/nvim/lazy/eyeliner.nvim/plugin/init.lua
+110.022  002.263  000.030: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+110.031  000.003  000.003: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+110.062  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+110.464  000.363  000.363: require('plugins.configs.eyeliner')
+110.659  000.003  000.003: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+110.666  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+112.479  001.806  001.806: require('mini.icons')
+112.569  000.006  000.006: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+112.580  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+113.474  000.550  000.550: require('oil')
+113.744  000.267  000.267: require('oil.ringbuf')
+114.003  000.257  000.257: require('oil.config')
+115.424  001.296  001.296: require('vim.filetype')
+116.460  000.324  000.324: require('oil.log')
+116.475  000.637  000.313: require('oil.fs')
+117.286  000.333  000.333: require('oil.constants')
+117.345  000.869  000.535: require('oil.util')
+117.418  000.008  000.008: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+117.426  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+119.682  000.217  000.217: require('mind.notify')
+120.481  000.381  000.381: require('plenary.bit')
+120.777  000.293  000.293: require('plenary.functional')
+120.812  001.126  000.452: require('plenary.path')
+120.814  001.690  000.347: require('mind.data')
+120.992  000.177  000.177: require('mind.indexing')
+121.175  000.181  000.181: require('mind.keymap')
+121.439  000.261  000.261: require('mind.node')
+121.805  000.363  000.363: require('mind.ui')
+121.824  003.170  000.498: require('mind.commands')
+122.002  000.177  000.177: require('mind.highlight')
+122.262  000.258  000.258: require('mind.state')
+122.268  004.139  000.534: require('mind')
+122.448  000.180  000.180: require('mind.defaults')
+123.196  000.262  000.262: sourcing /root/.local/share/nvim/lazy/todo-comments.nvim/plugin/todo.vim
+123.201  000.296  000.034: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+123.211  000.003  000.003: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+123.229  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+124.776  000.238  000.238: require('todo-comments.util')
+124.788  000.511  000.273: require('todo-comments.config')
+125.789  000.803  000.803: require('todo-comments.highlight')
+125.796  001.006  000.203: require('todo-comments.jump')
+125.801  002.265  000.748: require('todo-comments')
+125.845  002.610  000.345: require('plugins.configs.todo-comments')
+125.992  000.005  000.005: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+126.000  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+127.791  000.542  000.542: require('global-note.utils')
+127.795  000.793  000.251: require('global-note.preset')
+127.812  001.512  000.719: require('global-note')
+128.742  000.588  000.588: require('vim.health')
+128.754  000.922  000.334: require('vim.deprecated.health')
+129.156  003.153  000.719: require('plugins.configs.global-notes')
+129.257  000.007  000.007: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+129.273  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+130.472  000.840  000.840: require('rayso')
+131.142  000.342  000.342: require('lib.params')
+131.146  000.656  000.314: require('lib.create')
+131.174  001.896  000.400: require('plugins.configs.rayso')
+132.066  000.389  000.389: sourcing /root/.local/share/nvim/lazy/smart-splits.nvim/plugin/init.lua
+132.085  000.436  000.048: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+134.101  000.564  000.564: require('smart-splits.types')
+134.956  000.382  000.382: require('smart-splits.lazy')
+134.998  000.865  000.482: require('smart-splits')
+135.017  002.454  001.026: require('smart-splits.commands')
+136.053  000.443  000.443: require('smart-splits.mux.utils')
+136.066  000.958  000.515: require('smart-splits.config')
+136.678  000.314  000.314: require('smart-splits.log.file')
+137.016  000.328  000.328: require('smart-splits.log.async')
+137.028  000.935  000.293: require('smart-splits.log')
+137.774  000.311  000.311: require('smart-splits.mux')
+138.016  000.237  000.237: require('smart-splits.mux.tmux')
+138.238  000.209  000.209: require('smart-splits.utils')
+138.596  000.339  000.339: require('vim._system')
+144.906  012.730  007.287: sourcing /root/.local/share/nvim/lazy/smart-splits.nvim/plugin/smart-splits.lua
+144.925  012.773  000.043: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+144.956  000.008  000.008: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+144.986  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+145.905  000.903  000.903: require('plugins.configs.smart-splits')
+146.015  000.004  000.004: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+146.024  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+148.073  001.503  001.503: require('mini.ai')
+148.292  002.263  000.760: require('plugins.configs.mini-ai')
+148.357  000.004  000.004: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+148.367  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+149.820  001.449  001.449: require('lint')
+150.511  000.253  000.253: sourcing /root/.local/share/nvim/lazy/nvim-colorizer.lua/plugin/colorizer.lua
+150.515  000.278  000.025: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+150.522  000.002  000.002: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+150.537  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+152.139  000.271  000.271: require('colorizer.color')
+152.412  000.270  000.270: require('colorizer.constants')
+152.985  000.298  000.298: require('colorizer.trie')
+153.697  000.429  000.429: require('colorizer.utils')
+153.707  000.719  000.290: require('colorizer.parser.names')
+153.993  000.285  000.285: require('colorizer.parser.argb_hex')
+154.273  000.277  000.277: require('colorizer.parser.hsl')
+154.546  000.271  000.271: require('colorizer.parser.rgb')
+154.793  000.245  000.245: require('colorizer.parser.rgba_hex')
+155.040  000.245  000.245: require('colorizer.parser.oklch')
+155.336  000.294  000.294: require('colorizer.sass')
+155.803  000.466  000.466: require('colorizer.parser.xterm')
+155.809  003.395  000.296: require('colorizer.matcher')
+156.239  000.428  000.428: require('colorizer.tailwind')
+156.244  004.698  000.334: require('colorizer.buffer')
+156.529  000.284  000.284: require('colorizer.config')
+156.546  005.767  000.786: require('colorizer')
+157.021  000.336  000.336: require('colorizer.usercmds')
+157.036  006.496  000.392: require('plugins.configs.colorizer')
+157.082  000.004  000.004: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+157.088  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+158.454  001.128  001.128: require('mini.move')
+158.536  001.444  000.316: require('plugins.configs.mini-move')
+160.797  000.225  000.225: require('nvim-ts-autotag._log')
+160.956  000.155  000.155: require('nvim-ts-autotag.config.init')
+161.644  000.225  000.225: require('nvim-ts-autotag.utils')
+161.649  000.429  000.204: require('nvim-ts-autotag.config.ft')
+161.654  000.695  000.267: require('nvim-ts-autotag.config.plugin')
+161.663  001.400  000.326: require('nvim-ts-autotag.internal')
+161.664  002.462  001.061: require('nvim-ts-autotag')
+161.725  002.791  000.329: sourcing /root/.local/share/nvim/lazy/nvim-ts-autotag/plugin/nvim-ts-autotag.lua
+161.732  002.826  000.035: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+161.745  000.006  000.006: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+161.756  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+162.489  000.728  000.728: require('plugins.configs.ts-autotag')
+162.547  000.004  000.004: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+162.554  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+164.059  001.143  001.143: require('mini.surround')
+166.189  003.592  002.449: require('plugins.configs.mini-surround')
+166.248  000.004  000.004: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+166.256  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+167.296  000.733  000.733: require('ts-error-translator')
+167.619  000.317  000.317: require('ts-error-translator.diagnostic')
+167.623  001.364  000.314: require('plugins.configs.ts-error-translator')
+168.482  000.421  000.421: sourcing /root/.local/share/nvim/lazy/hop.nvim/plugin/hop.vim
+168.487  000.450  000.028: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+168.495  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+168.507  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+169.657  000.827  000.827: require('hop')
+170.116  000.199  000.199: require('hop.perm')
+170.582  000.192  000.192: require('hop.priority')
+170.587  000.466  000.275: require('hop.hint')
+170.588  000.927  000.261: require('hop.defaults')
+170.830  000.238  000.238: require('hop.highlight')
+170.859  002.345  000.352: require('plugins.configs.hop')
+171.719  000.364  000.364: sourcing /root/.local/share/nvim/lazy/telescope.nvim/plugin/telescope.lua
+171.724  000.386  000.022: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+171.731  000.002  000.002: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+171.740  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+173.647  000.262  000.262: require('telescope._extensions')
+173.651  001.596  001.333: require('telescope')
+175.211  000.394  000.394: require('plenary.strings')
+176.047  000.279  000.279: require('plenary.log')
+176.061  000.568  000.290: require('telescope.log')
+177.013  000.192  000.192: require('plenary.compat')
+177.020  000.606  000.414: require('plenary.job')
+177.211  000.189  000.189: require('telescope.state')
+177.545  000.326  000.326: require('vim.hl')
+177.560  001.499  000.378: require('telescope.utils')
+177.566  002.352  000.285: require('telescope.sorters')
+178.881  004.509  001.763: require('telescope.config')
+179.418  000.159  000.159: require('telescope.config.resolve')
+179.421  000.537  000.378: require('telescope.pickers.entry_display')
+180.013  000.367  000.367: require('telescope.make_entry')
+181.259  000.206  000.206: require('plenary.tbl')
+181.263  000.413  000.207: require('plenary.vararg.rotate')
+181.264  000.602  000.189: require('plenary.vararg')
+181.464  000.199  000.199: require('plenary.errors')
+181.469  000.999  000.197: require('plenary.async.async')
+182.196  000.191  000.191: require('plenary.async.structs')
+182.202  000.337  000.147: require('plenary.async.control')
+182.206  000.538  000.201: require('plenary.async.util')
+182.207  000.737  000.200: require('plenary.async.tests')
+182.210  001.960  000.224: require('plenary.async')
+182.212  002.196  000.236: require('telescope.finders.async_static_finder')
+182.837  000.187  000.187: require('plenary.class')
+182.847  000.421  000.233: require('telescope._')
+182.848  000.636  000.215: require('telescope.finders.async_oneshot_finder')
+183.057  000.207  000.207: require('telescope.finders.async_job_finder')
+183.061  003.639  000.234: require('telescope.finders')
+184.435  000.375  000.375: require('plenary.window.border')
+184.658  000.221  000.221: require('plenary.window')
+184.878  000.218  000.218: require('plenary.popup.utils')
+184.885  001.407  000.594: require('plenary.popup')
+185.709  000.401  000.401: require('telescope.pickers.scroller')
+185.905  000.192  000.192: require('telescope.actions.state')
+186.123  000.216  000.216: require('telescope.actions.utils')
+186.708  000.350  000.350: require('telescope.actions.mt')
+186.736  000.611  000.261: require('telescope.actions.set')
+186.996  000.258  000.258: require('telescope.from_entry')
+187.333  002.447  000.769: require('telescope.actions')
+187.601  000.266  000.266: require('telescope.debounce')
+187.907  000.303  000.303: require('telescope.mappings')
+188.094  000.184  000.184: require('telescope.pickers.highlights')
+188.300  000.204  000.204: require('telescope.pickers.window')
+188.502  000.200  000.200: require('telescope.pickers.layout')
+188.950  000.222  000.222: require('telescope.algos.linked_list')
+188.957  000.453  000.231: require('telescope.entry_manager')
+189.195  000.237  000.237: require('telescope.pickers.multi')
+189.221  006.158  000.458: require('telescope.pickers')
+189.224  015.571  000.727: require('telescope._extensions.aerial')
+190.031  018.286  001.119: require('plugins.configs.telescope')
+190.707  000.230  000.230: sourcing /root/.local/share/nvim/lazy/nvim-scissors/plugin/ex-commands.lua
+190.713  000.264  000.034: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+190.722  000.003  000.003: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+190.735  000.001  000.001: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+191.286  000.207  000.207: sourcing /usr/share/nvim/runtime/plugin/editorconfig.lua
+191.291  000.227  000.020: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+191.630  000.320  000.320: sourcing /usr/share/nvim/runtime/plugin/gzip.vim
+191.633  000.337  000.017: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+191.879  000.227  000.227: sourcing /usr/share/nvim/runtime/plugin/man.lua
+191.883  000.243  000.016: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+192.924  000.291  000.291: sourcing /usr/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim
+192.938  001.039  000.747: sourcing /usr/share/nvim/runtime/plugin/matchit.vim
+192.940  001.052  000.014: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+193.233  000.264  000.264: sourcing /usr/share/nvim/runtime/plugin/matchparen.vim
+193.236  000.279  000.015: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+193.410  000.154  000.154: sourcing /usr/share/nvim/runtime/plugin/netrwPlugin.vim
+193.414  000.172  000.018: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+193.709  000.276  000.276: sourcing /usr/share/nvim/runtime/plugin/osc52.lua
+193.713  000.294  000.018: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+193.931  000.199  000.199: sourcing /usr/share/nvim/runtime/plugin/rplugin.vim
+193.934  000.216  000.017: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+194.097  000.136  000.136: sourcing /usr/share/nvim/runtime/plugin/shada.vim
+194.099  000.152  000.016: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+194.298  000.161  000.161: sourcing /usr/share/nvim/runtime/plugin/spellfile.vim
+194.301  000.191  000.030: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+194.476  000.147  000.147: sourcing /usr/share/nvim/runtime/plugin/tarPlugin.vim
+194.478  000.164  000.017: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+194.675  000.167  000.167: sourcing /usr/share/nvim/runtime/plugin/tohtml.lua
+194.679  000.189  000.022: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+194.817  000.110  000.110: sourcing /usr/share/nvim/runtime/plugin/tutor.vim
+194.820  000.131  000.022: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+195.124  000.242  000.242: sourcing /usr/share/nvim/runtime/plugin/zipPlugin.vim
+195.127  000.263  000.020: sourcing nvim_exec2() called at /root/.config/nvim/init.lua:0
+195.362  177.552  022.208: require('plugins')
+196.918  000.168  000.168: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.006  000.056  000.056: require('poimandres.palette')
+197.123  000.004  000.004: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.127  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.130  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.133  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.158  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.160  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.163  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.166  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.168  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.171  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.173  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.175  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.178  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.180  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.182  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.186  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.189  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.193  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.195  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.197  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.200  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.241  000.002  000.002: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.246  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.248  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.253  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.255  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.257  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.261  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.264  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.266  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.268  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.272  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.274  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.276  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.278  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.280  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.284  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.287  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.289  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.293  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.295  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.297  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.300  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.302  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.304  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.306  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.308  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.310  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.313  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.315  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.318  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.320  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.322  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.323  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.325  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.327  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.329  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.333  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.335  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.337  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.338  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.341  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.343  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.345  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.347  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.349  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.351  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.353  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.361  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.364  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.365  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.368  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.370  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.372  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.376  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.377  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.383  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.385  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.388  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.390  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.392  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.395  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.396  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.398  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.400  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.403  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.405  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.408  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.409  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.411  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.413  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.418  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.420  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.422  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.424  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.427  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.430  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.432  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.434  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.436  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.438  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.440  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.443  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.444  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.446  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.448  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.450  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.452  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.454  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.485  000.003  000.003: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.500  000.002  000.002: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.503  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.506  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.509  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.514  000.002  000.002: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.578  000.003  000.003: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.611  000.002  000.002: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.615  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.635  000.002  000.002: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.654  000.002  000.002: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.658  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.660  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.663  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.665  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.671  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.674  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.676  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.678  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.680  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.683  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.685  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.687  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.701  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.706  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.708  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.711  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.714  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.716  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.718  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.720  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.724  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.726  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.728  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.731  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.733  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.735  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.738  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.741  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.744  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.746  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.748  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.751  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.754  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.757  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.759  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.761  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.763  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.768  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.770  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.773  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.775  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.777  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.779  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.781  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.783  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.785  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.787  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.789  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.792  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.794  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.797  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.799  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.801  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.804  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.806  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.810  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.812  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.814  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.816  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.819  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.821  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.822  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.824  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.827  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.829  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.831  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.833  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.835  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.839  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.841  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.843  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.847  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.849  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.851  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.853  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.855  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.857  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.865  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.867  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.869  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.871  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.873  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.876  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.878  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.879  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.881  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.884  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.886  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.888  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.895  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.896  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.914  000.017  000.017: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.919  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.922  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.925  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.927  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.930  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.933  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.983  000.002  000.002: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.986  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.988  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.994  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.996  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+197.998  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.000  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.002  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.004  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.006  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.009  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.011  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.013  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.015  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.017  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.019  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.022  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.024  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.026  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.027  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.032  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.034  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.036  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.038  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.041  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.043  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.045  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.047  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.051  000.002  000.002: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.053  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.056  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.058  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.060  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.062  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.064  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.067  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.069  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.072  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.074  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.075  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.078  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.080  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.081  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.091  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.093  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.096  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.097  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.099  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.101  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.103  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.106  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.108  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.110  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.112  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.116  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.120  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.122  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.124  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.126  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.128  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.132  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.134  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.136  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.138  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.140  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.143  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.145  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.147  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.149  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.151  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.154  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.158  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.160  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.162  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.164  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.167  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.168  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.170  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.172  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.174  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.178  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.181  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.183  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.185  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.187  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.190  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.192  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.194  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.197  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.200  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.203  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.205  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.207  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.209  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.210  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.214  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.216  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.218  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.221  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.223  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.226  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.228  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.230  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.232  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.255  000.002  000.002: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.259  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.262  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.272  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.274  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.276  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.280  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.282  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.284  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.285  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.287  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.290  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.292  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.295  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.297  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.299  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.303  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.370  000.003  000.003: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.377  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.379  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.382  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.385  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.405  000.002  000.002: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.408  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.410  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.412  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.417  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.420  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.423  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.427  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.429  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.431  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.433  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.435  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.437  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.440  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.442  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.446  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.448  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.451  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.453  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.455  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.457  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.462  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.464  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.466  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.468  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.471  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.473  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.475  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.477  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.521  000.002  000.002: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.524  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.526  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.528  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.532  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.536  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.538  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.540  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.542  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.544  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.546  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.549  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.551  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.554  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.556  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.558  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.570  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.572  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.574  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.579  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.584  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.586  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.588  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.590  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.592  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.595  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.597  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.599  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.601  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.604  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.607  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.610  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.614  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.616  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.620  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.622  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.626  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.628  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.630  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.633  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.634  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.636  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.639  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.641  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.646  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.648  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.649  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.651  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.653  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.655  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.658  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.660  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.662  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.664  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.667  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.724  000.053  000.053: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.727  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.728  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.730  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.732  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.737  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.739  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.740  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.743  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.745  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.748  000.001  000.001: sourcing nvim_exec2() called at /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua:0
+198.750  002.038  001.334: sourcing /root/.local/share/nvim/lazy/poimandres.nvim/colors/poimandres.lua
+200.846  000.012  000.012: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.231  000.003  000.003: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.235  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.237  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.239  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.242  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.244  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.246  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.247  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.250  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.252  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.254  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.256  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.258  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.260  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.262  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.264  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.274  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.276  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.278  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.280  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.282  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.284  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.286  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.288  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.290  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.292  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.295  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.297  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.299  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.301  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.303  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.305  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.307  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.309  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.311  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.313  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.315  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.317  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.319  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.321  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.322  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.324  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.326  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.368  000.003  000.003: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.372  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.396  000.002  000.002: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.399  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.402  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.403  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.405  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.407  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.409  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.411  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.413  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.415  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.416  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.420  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.423  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.425  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.427  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.428  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.430  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.432  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.434  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.436  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.438  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.439  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.442  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.444  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.445  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.447  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.449  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.451  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.453  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.456  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.458  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.459  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.461  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.463  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.477  000.003  000.003: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.509  000.002  000.002: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.515  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.521  000.002  000.002: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.526  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.534  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.545  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.551  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.557  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.561  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.567  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.571  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.578  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.599  000.002  000.002: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.605  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.616  000.007  000.007: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.665  000.003  000.003: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.670  000.002  000.002: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.720  000.003  000.003: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.725  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.736  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.741  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.747  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.753  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.770  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.777  000.002  000.002: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.781  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.787  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.791  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.812  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.820  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.824  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.831  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.835  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.840  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.849  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.855  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.860  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.865  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.896  000.005  000.005: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.902  000.002  000.002: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.905  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.945  000.004  000.004: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+201.989  000.003  000.003: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.014  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.020  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.025  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.029  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.033  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.039  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.044  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.050  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.053  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.057  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.062  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.067  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.098  000.002  000.002: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.104  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.110  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.114  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.118  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.125  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.130  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.137  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.145  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.153  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.157  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.162  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.167  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.189  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.195  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.326  000.004  000.004: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.357  000.002  000.002: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.373  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.389  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.402  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.438  000.002  000.002: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.444  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.537  000.012  000.012: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.553  000.004  000.004: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.564  000.009  000.009: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.571  000.004  000.004: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.575  000.003  000.003: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.642  000.002  000.002: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.645  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.647  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.650  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.657  000.002  000.002: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.660  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.663  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.665  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.668  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.671  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.703  000.002  000.002: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.707  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.712  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.715  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.717  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.720  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.723  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.725  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.727  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.731  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.734  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.736  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.769  000.002  000.002: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+202.849  196.742  005.710: sourcing /root/.config/nvim/init.lua
+202.856  000.101: sourcing vimrc file(s)
+203.059  000.051  000.051: sourcing /usr/share/nvim/runtime/filetype.lua
+204.163  000.402  000.402: sourcing /usr/share/nvim/runtime/syntax/synload.vim
+204.225  001.133  000.731: sourcing /usr/share/nvim/runtime/syntax/syntax.vim
+204.238  000.198: inits 3
+205.872  001.634: reading ShaDa
+205.956  000.085: opening buffers
+206.244  000.288: BufEnter autocommands
+206.248  000.004: editing files in windows
+207.135  000.619  000.619: sourcing /usr/share/nvim/runtime/autoload/provider/clipboard.vim
+207.173  000.008  000.008: sourcing nvim_exec2() called at nvim_exec2() called at VimEnter Autocommands for "*":0:1
+207.253  000.071  000.071: sourcing nvim_exec2() called at nvim_exec2() called at VimEnter Autocommands for "*":0:1
+209.308  003.016  002.318: sourcing nvim_exec2() called at VimEnter Autocommands for "*":0
+209.323  000.059: VimEnter autocommands
+209.437  000.114: UIEnter autocommands
+209.439  000.003: before starting main loop
+210.625  000.004  000.004: sourcing nvim_exec2() called at CursorMoved Autocommands for "*":0
+210.647  000.001  000.001: sourcing nvim_exec2() called at CursorMoved Autocommands for "*":0
+212.505  000.476  000.476: require('undo-glow.color')
+212.516  001.020  000.544: require('undo-glow.config')
+213.479  000.962  000.962: require('undo-glow.easing')
+214.352  000.869  000.869: require('undo-glow.animation')
+214.506  003.814  000.963: require('undo-glow')
+215.201  000.430  000.430: require('undo-glow.highlight')
+215.345  005.901  001.652: require('undo-glow')
+215.957  000.610  000.610: require('undo-glow.commands')
+216.720  000.741  000.741: require('undo-glow.utils')
+217.148  000.456: first screen update
+217.150  000.002: --- NVIM STARTED ---
+
