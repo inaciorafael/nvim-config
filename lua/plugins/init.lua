@@ -84,7 +84,7 @@ local plugins = {
   -- lsp
   {
     "neovim/nvim-lspconfig",
-    event = { "BufReadPre", "BufNewFile" },
+    event = { "BufReadPre", "BufNewFile", "BufReadPost" },
     config = function()
       require "plugins.configs.lspconfig"
     end,
@@ -235,12 +235,6 @@ local plugins = {
     "TobinPalmer/rayso.nvim",
     config = function()
       require "plugins.configs.rayso"
-    end,
-  },
-  {
-    "mrjones2014/smart-splits.nvim",
-    config = function()
-      require "plugins.configs.smart-splits"
     end,
   },
   {
