@@ -1,21 +1,6 @@
 local plugins = {
   { lazy = true, "nvim-lua/plenary.nvim" },
 
-  {
-    "EdenEast/nightfox.nvim",
-    priority = 1000,
-    config = true,
-  },
-
-  -- file tree
-  -- {
-  --   "nvim-tree/nvim-tree.lua",
-  --   cmd = { "NvimTreeToggle", "NvimTreeFocus" },
-  --   config = function()
-  --     require("nvim-tree").setup()
-  --   end,
-  -- },
-
   -- icons, for UI related plugins
   {
     "nvim-tree/nvim-web-devicons",
@@ -184,12 +169,6 @@ local plugins = {
     end,
   },
   {
-    "echasnovski/mini.move",
-    config = function()
-      require "plugins.configs.mini-move"
-    end,
-  },
-  {
     "echasnovski/mini.ai",
     config = function()
       require "plugins.configs.mini-ai"
@@ -219,16 +198,6 @@ local plugins = {
     end,
   },
   {
-    "ellisonleao/carbon-now.nvim",
-    lazy = true,
-    cmd = "CarbonNow",
-    config = function()
-      require "plugins.configs.carbon-now"
-    end,
-    -- opts = { [[ your custom config here ]] },
-  },
-  { "famiu/bufdelete.nvim" },
-  {
     "nat-418/boole.nvim",
     config = function()
       require "plugins.configs.boole"
@@ -242,12 +211,6 @@ local plugins = {
     end,
   },
   {
-    "j-hui/fidget.nvim",
-    config = function()
-      require("fidget").setup {}
-    end,
-  },
-  {
     "vigoux/notifier.nvim",
     config = function()
       require("notifier").setup {
@@ -256,34 +219,10 @@ local plugins = {
     end,
   },
   {
-    "f-person/git-blame.nvim",
-    -- load the plugin at startup
-    event = "VeryLazy",
-    -- Because of the keys part, you will be lazy loading this plugin.
-    -- The plugin wil only load once one of the keys is used.
-    -- If you want to load the plugin at startup, add something like event = "VeryLazy",
-    -- or lazy = false. One of both options will work.
-    opts = {
-      -- your configuration comes here
-      -- for example
-      enabled = false, -- if you want to enable the plugin
-      message_template = " <summary> • <date> • <author> • <<sha>>", -- template for the blame message, check the Message template section for more options
-      date_format = "%m-%d-%Y %H:%M:%S", -- template for the date, check Date format section for more options
-      virtual_text_column = 1, -- virtual text start column, check Start virtual text at column section for more options
-    },
-  },
-  {
     "m4xshen/hardtime.nvim",
     dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
     config = function()
       require "plugins.configs.hardtime"
-    end,
-  },
-  {
-    "mvllow/modes.nvim",
-    tag = "v0.2.0",
-    config = function()
-      require "plugins.configs.modes"
     end,
   },
   {
@@ -305,12 +244,6 @@ local plugins = {
     end,
   },
   {
-    "backdround/global-note.nvim",
-    config = function()
-      require "plugins.configs.global-notes"
-    end,
-  },
-  {
     "sainnhe/everforest",
     lazy = false,
     priority = 1000,
@@ -318,44 +251,6 @@ local plugins = {
       -- Optionally configure and load the colorscheme
       -- directly inside the plugin declaration.
       vim.g.everforest_enable_italic = true
-    end,
-  },
-  {
-    "Selyss/mind.nvim",
-    branch = "v2.2",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-tree/nvim-web-devicons", -- optional, used for icons
-    },
-    opts = {
-      -- your configuration comes here
-    },
-  },
-  {
-    "toppair/peek.nvim",
-    event = { "VeryLazy" },
-    build = "deno task --quiet build:fast",
-    config = function()
-      require "plugins.configs.peek"
-    end,
-  },
-  {
-    "mfussenegger/nvim-lint",
-    config = function()
-      local lint = require "lint"
-
-      lint.linters_by_ft = {
-        javascript = { "eslint_d" },
-        typescript = { "eslint_d" },
-        javascriptreact = { "eslint_d" },
-        typescriptreact = { "eslint_d" },
-      }
-
-      vim.api.nvim_create_autocmd({ "BufWritePost", "InsertLeave" }, {
-        callback = function()
-          require("lint").try_lint()
-        end,
-      })
     end,
   },
   {
@@ -376,12 +271,6 @@ local plugins = {
     dependencies = { "nvim-telescope/telescope.nvim" }, -- apenas se quiser integrar com o Telescope
   },
   {
-    "jinh0/eyeliner.nvim",
-    config = function()
-      require "plugins.configs.eyeliner"
-    end,
-  },
-  {
     "chrisgrieser/nvim-rip-substitute",
     cmd = "RipSubstitute",
     opts = {},
@@ -395,11 +284,6 @@ local plugins = {
         desc = " rip substitute",
       },
     },
-  },
-  {
-    "dgox16/oldworld.nvim",
-    lazy = false,
-    priority = 1000,
   },
   {
     "y3owk1n/undo-glow.nvim",
@@ -603,31 +487,7 @@ local plugins = {
     ft = { "typescriptreact", "javascriptreact", "javascript" },
     opts = {},
   },
-  {
-    "jesseleite/nvim-macroni",
-    config = function()
-      require "plugins.configs.nvim-macroni"
-    end,
-    lazy = false,
-  },
 
-  {
-    "Dan7h3x/LazyDo",
-    branch = "main",
-    cmd = { "LazyDoToggle", "LazyDoPin", "LazyDoToggleStorage" },
-    config = function()
-      require "plugins.configs.lazydo"
-    end,
-    keys = { -- recommended keymap for easy toggle LazyDo in normal and insert modes (arbitrary)
-      {
-        "<F2>",
-        "<ESC><CMD>LazyDoToggle<CR>",
-        mode = { "n", "i" },
-      },
-    },
-    event = "VeryLazy",
-  },
-  { "MunifTanjim/nui.nvim" },
   {
     "nvim-neo-tree/neo-tree.nvim",
     branch = "v3.x",
@@ -647,7 +507,6 @@ local plugins = {
       "nvim-tree/nvim-web-devicons",
     },
   },
-  { "rebelot/kanagawa.nvim" },
 }
 
 require("lazy").setup(plugins, require "lazy_config")

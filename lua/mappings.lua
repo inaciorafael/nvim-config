@@ -7,18 +7,13 @@ vim.g.mapleader = " "
 
 map("n", "<C-s>", functions.switch_case, default_opts)
 
--- general mappings
--- map("n", "<C-s>", "<cmd> w <CR>")
--- map("i", "jk", "<ESC>")
--- map("n", "<C-c>", "<cmd> %y+ <CR>") -- copy whole filecontent
-
 -- Motion windows
 map("n", "<C-l>", "<C-w>l")
 map("n", "<C-h>", "<C-w>h")
 map("n", "<C-j>", "<C-w>j")
 map("n", "<C-k>", "<C-w>k")
 
--- nvimtree
+-- neotree
 map("n", "<leader>e", "<cmd> Neotree toggle <CR>")
 map("n", "<C-f>", "<cmd> Neotree reveal <CR>")
 
@@ -60,33 +55,13 @@ map("n", "-", "<cmd> Oil <CR>", { desc = "Open parent directory" })
 
 -- Hop
 map("n", "S", "<cmd> HopChar1 <CR>", { noremap = true, silent = true })
+map("n", "f", "<cmd> HopChar1CurrentLine <CR>", { noremap = true, silent = true })
 
 -- Todo comments
 map("n", "tl", "<cmd> TodoTelescope <CR>")
 
 -- Atone
-local history_nvim_tree_open = false
-
-local function is_nvim_tree_open()
-  for _, buf in ipairs(vim.api.nvim_list_bufs()) do
-    local buf_name = vim.api.nvim_buf_get_name(buf)
-    if buf_name:match "NvimTree_1" then
-      return true
-    end
-  end
-
-  return false
-end
-
-local function open_undotree()
-  if is_nvim_tree_open() then
-    vim.cmd "NvimTreeClose"
-  end
-
-  vim.cmd "Atone toggle"
-end
-
-map("n", "<leader>u", open_undotree, { noremap = true, silent = true })
+map("n", "<leader>u", "<cmd> Atone toggle <CR>", { noremap = true, silent = true })
 
 -- (Scissor) criar snippets e editar em tempo real
 map("n", "<leader>sa", function()
@@ -95,11 +70,3 @@ end, { desc = "Snippet: Add" })
 map("n", "<leader>se", function()
   require("scissors").editSnippet()
 end, { desc = "Snippet: Edit" })
-
--- (Macroni)
-map({ "n", "v" }, "<leader>m", function()
-  require("telescope").extensions.macroni.saved_macros()
-end)
-
--- lazydo
-map({ "n", "v" }, "td", "<cmd> LazyDoToggle <CR>")
