@@ -26,16 +26,6 @@ require("lualine").setup {
       "encoding",
       "fileformat",
       "filetype",
-      {
-        -- lazydo integration
-        function()
-          return require("lazydo").get_lualine_stats()
-        end,
-        cond = function()
-          return require("lazydo")._initialized
-        end,
-        color = { fg = "#a6e3a1", gui = "bold" }, -- opcional: cor custom
-      },
     },
     lualine_y = { "progress" },
     lualine_z = { "location" },
