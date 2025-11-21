@@ -6,7 +6,7 @@ vim.cmd "syntax off"
 o.laststatus = 3 -- global statusline
 o.showmode = false
 o.cursorline = true
-o.relativenumber = true
+o.relativenumber = false
 
 o.clipboard = "unnamedplus"
 vim.opt.clipboard = "unnamedplus"
