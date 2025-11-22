@@ -1,26 +1,33 @@
-vim.lsp.config["lua_ls"] = {
-  cmd = { "lua-language-server" },
-  filetypes = { "lua" },
-  root_makers = { { ".luarc.json", ".luarc.jsonc" }, ".git" },
-  settings = {
-    Lua = {
-      runtime = {
-        version = "LuaJIT",
+local servers = {
+  lua_ls = {
+    cmd = { "lua-language-server" },
+    filetypes = { "lua" },
+    root_makers = { { ".luarc.json", ".luarc.jsonc" }, ".git" },
+    settings = {
+      Lua = {
+        runtime = {
+          version = "LuaJIT",
+        },
+        -- diagnostics = {
+        --   globals = { "vim" },
+        -- },
       },
-      -- diagnostics = {
-      --   globals = { "vim" },
-      -- },
     },
+  },
+
+  tailwindcss = {
+    filetypes = { "typescriptreact", "javascriptreact", "html" },
+  },
+
+  ts_ls = {
+    filetypes = { "typescriptreact", "typescript" },
   },
 }
 
-vim.lsp.config["tailwindcss"] = {
-  filetypes = { "typescriptreact", "javascriptreact", "html" },
-}
-
-vim.lsp.enable "lua_ls"
-vim.lsp.enable "ts_ls"
-vim.lsp.enable "tailwindcss"
+for name, config in pairs(servers) do
+  vim.lsp.config[name] = config
+  vim.lsp.enable(name)
+end
 
 vim.api.nvim_create_autocmd("LspAttach", {
   group = vim.api.nvim_create_augroup("UserLspConfig", {}),

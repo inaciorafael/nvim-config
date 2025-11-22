@@ -38,8 +38,26 @@ map("n", "<leader>lw", "<cmd> Telescope diagnostics <CR>")
 -- bufferline, cycle buffers
 map("n", "<S-l>", "<cmd> BufferLineCycleNext <CR>")
 map("n", "<S-h>", "<cmd> BufferLineCyclePrev <CR>")
-map("n", "<S-q>", "<cmd> Bdelete <CR>")
 map("n", "<S-p>", "<cmd> BufferLineTogglePin <CR>")
+map("n", "<S-q>", function()
+  local bufnr = vim.api.nvim_get_current_buf()
+  local filetype = vim.bo[bufnr].filetype
+
+  if filetype == "neo-tree" then
+    vim.notify "Não é possível fechar o buffer do Neo-Tree"
+    return
+  end
+
+  local buffers = vim.tbl_filter(function(b)
+    return vim.api.nvim_buf_is_loaded(b) and vim.bo[b].buflisted and b ~= bufnr
+  end, vim.api.nvim_list_bufs())
+
+  if #buffers > 0 then
+    vim.cmd("buffer " .. buffers[1])
+  end
+
+  vim.api.nvim_buf_delete(bufnr, { force = false })
+end)
 
 -- comment.nvim
 map("n", "<leader>/", "gcc", { remap = true })

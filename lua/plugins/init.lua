@@ -7,6 +7,7 @@ local plugins = {
     config = function()
       require("nvim-web-devicons").setup()
     end,
+    event = "UIEnter",
   },
 
   -- syntax highlighting
@@ -16,6 +17,7 @@ local plugins = {
     config = function()
       require "plugins.configs.treesitter"
     end,
+    event = { "BufReadPre", "BufNewFile" }
   },
 
   -- buffer + tab line
@@ -84,7 +86,7 @@ local plugins = {
   -- lsp
   {
     "neovim/nvim-lspconfig",
-    event = { "BufReadPre", "BufNewFile", "BufReadPost" },
+    event = "BufReadPre",
     config = function()
       require "plugins.configs.lspconfig"
     end,
@@ -97,6 +99,7 @@ local plugins = {
     config = function()
       require "plugins.configs.conform"
     end,
+    event = { "BufWritePre" }
   },
 
   -- indent lines
@@ -132,6 +135,7 @@ local plugins = {
 
   {
     "stevearc/oil.nvim",
+    cmd = "Oil",
     opts = {},
     -- Optional dependencies
     dependencies = { { "echasnovski/mini.icons", opts = {} } },
@@ -140,24 +144,28 @@ local plugins = {
   {
     "folke/todo-comments.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
+    event = "BufReadPost",
     config = function()
       require "plugins.configs.todo-comments"
     end,
   },
   {
     "windwp/nvim-ts-autotag",
+    ft = { "html", "javascriptreact", "typescriptreact", "vue", "svelte", "angular" },
     config = function()
       require "plugins.configs.ts-autotag"
     end,
   },
   {
     "NvChad/nvim-colorizer.lua",
+    event = "BufReadPost",
     config = function()
       require "plugins.configs.colorizer"
     end,
   },
   {
     "phaazon/hop.nvim",
+    cmd = { "HopChar1", "HopChar1CurrentLine" },
     config = function()
       require "plugins.configs.hop"
     end,
@@ -167,18 +175,21 @@ local plugins = {
     config = function()
       require "plugins.configs.mini-surround"
     end,
+    event = "VeryLazy"
   },
   {
     "echasnovski/mini.ai",
     config = function()
       require "plugins.configs.mini-ai"
     end,
+    event = "VeryLazy"
   },
   {
     "otavioschwanck/arrow.nvim",
     config = function()
       require "plugins.configs.arrow"
     end,
+    event = "VeryLazy"
   },
   {
     "folke/persistence.nvim",
@@ -196,12 +207,14 @@ local plugins = {
     config = function()
       require "plugins.configs.mini-starter"
     end,
+    event = "VimEnter"
   },
   {
     "nat-418/boole.nvim",
     config = function()
       require "plugins.configs.boole"
     end,
+    event = "VeryLazy"
   },
   {
     "nvim-lualine/lualine.nvim",
@@ -209,6 +222,7 @@ local plugins = {
     config = function()
       require "plugins.configs.lualine"
     end,
+    event = "VeryLazy"
   },
   {
     "vigoux/notifier.nvim",
@@ -217,22 +231,18 @@ local plugins = {
         -- You configuration here
       }
     end,
-  },
-  {
-    "m4xshen/hardtime.nvim",
-    dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
-    config = function()
-      require "plugins.configs.hardtime"
-    end,
+    event = "VeryLazy"
   },
   {
     "cappyzawa/trim.nvim",
     config = function()
       require "plugins.configs.trim"
     end,
+    event = "BufWritePre"
   },
   {
     "TobinPalmer/rayso.nvim",
+    cmd = "Rayso",
     config = function()
       require "plugins.configs.rayso"
     end,
@@ -259,10 +269,12 @@ local plugins = {
     config = function()
       require "plugins.configs.ts-error-translator"
     end,
+    event = "LspAttach"
   },
   {
     "chrisgrieser/nvim-scissors",
     dependencies = { "nvim-telescope/telescope.nvim" }, -- apenas se quiser integrar com o Telescope
+    event = "VeryLazy"
   },
   {
     "chrisgrieser/nvim-rip-substitute",
@@ -478,7 +490,7 @@ local plugins = {
       "nvim-treesitter/nvim-treesitter",
       "nvim-treesitter/nvim-treesitter-textobjects",
     },
-    ft = { "typescriptreact", "javascriptreact", "javascript" },
+    ft = { "typescriptreact", "javascriptreact" },
     opts = {},
   },
 
@@ -491,9 +503,11 @@ local plugins = {
       "nvim-tree/nvim-web-devicons", -- optional, but recommended
     },
     lazy = false, -- neo-tree will lazily load itself
+    cmd = "Neotree"
   },
   {
     "stevearc/aerial.nvim",
+    event = "BufReadPost",
     opts = {},
     -- Optional dependencies
     dependencies = {
