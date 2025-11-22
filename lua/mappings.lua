@@ -72,8 +72,8 @@ end)
 map("n", "-", "<cmd> Oil <CR>", { desc = "Open parent directory" })
 
 -- Hop
-map("n", "S", "<cmd> HopChar1 <CR>", { noremap = true, silent = true })
-map("n", "f", "<cmd> HopChar1CurrentLine <CR>", { noremap = true, silent = true })
+map({ "n", "v" }, "S", "<cmd> HopChar1 <CR>", { noremap = true, silent = true })
+map({ "n", "v" }, "f", "<cmd> HopChar1CurrentLine <CR>", { noremap = true, silent = true })
 
 -- Todo comments
 map("n", "tl", "<cmd> TodoTelescope <CR>")
