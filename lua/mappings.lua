@@ -40,23 +40,36 @@ map("n", "<S-l>", "<cmd> BufferLineCycleNext <CR>")
 map("n", "<S-h>", "<cmd> BufferLineCyclePrev <CR>")
 map("n", "<S-p>", "<cmd> BufferLineTogglePin <CR>")
 map("n", "<S-q>", function()
-  local bufnr = vim.api.nvim_get_current_buf()
-  local filetype = vim.bo[bufnr].filetype
+  local current = vim.api.nvim_get_current_buf()
+  local ft = vim.bo[current].filetype
 
-  if filetype == "neo-tree" then
-    vim.notify "Não é possível fechar o buffer do Neo-Tree"
+  -- Não permitir fechar o Neo-tree
+  if ft == "neo-tree" then
+    vim.notify("Não é possível fechar o Neo-tree", "warn")
     return
   end
 
-  local buffers = vim.tbl_filter(function(b)
-    return vim.api.nvim_buf_is_loaded(b) and vim.bo[b].buflisted and b ~= bufnr
+  -- Outros buffers listados e carregados
+  local other_buffers = vim.tbl_filter(function(b)
+    return vim.api.nvim_buf_is_loaded(b) and vim.bo[b].buflisted and b ~= current
   end, vim.api.nvim_list_bufs())
 
-  if #buffers > 0 then
-    vim.cmd("buffer " .. buffers[1])
+  if #other_buffers > 0 then
+    -- troca pra outro buffer e fecha o atual
+    vim.cmd("buffer " .. other_buffers[1])
+    vim.api.nvim_buf_delete(current, { force = false })
+    return
   end
 
-  vim.api.nvim_buf_delete(bufnr, { force = false })
+  -- -----------------------------------------
+  -- SEM OUTROS BUFFERS => ABRIR MINI.STARTER
+  -- -----------------------------------------
+
+  -- Fecha o atual
+  vim.api.nvim_buf_delete(current, { force = false })
+
+  -- Abre o mini.starter
+  vim.cmd "lua require('mini.starter').open()"
 end)
 
 -- comment.nvim
