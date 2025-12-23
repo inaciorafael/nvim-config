@@ -43,32 +43,23 @@ map("n", "<S-q>", function()
   local current = vim.api.nvim_get_current_buf()
   local ft = vim.bo[current].filetype
 
-  -- Não permitir fechar o Neo-tree
   if ft == "neo-tree" then
     vim.notify("Não é possível fechar o Neo-tree", "warn")
     return
   end
 
-  -- Outros buffers listados e carregados
   local other_buffers = vim.tbl_filter(function(b)
     return vim.api.nvim_buf_is_loaded(b) and vim.bo[b].buflisted and b ~= current
   end, vim.api.nvim_list_bufs())
 
   if #other_buffers > 0 then
-    -- troca pra outro buffer e fecha o atual
     vim.cmd("buffer " .. other_buffers[1])
     vim.api.nvim_buf_delete(current, { force = false })
     return
   end
 
-  -- -----------------------------------------
-  -- SEM OUTROS BUFFERS => ABRIR MINI.STARTER
-  -- -----------------------------------------
-
-  -- Fecha o atual
   vim.api.nvim_buf_delete(current, { force = false })
 
-  -- Abre o mini.starter
   vim.cmd "lua require('mini.starter').open()"
 end)
 
