@@ -17,7 +17,7 @@ local plugins = {
     config = function()
       require "plugins.configs.treesitter"
     end,
-    event = { "BufReadPre", "BufNewFile" }
+    event = { "BufReadPre", "BufNewFile" },
   },
 
   -- buffer + tab line
@@ -99,7 +99,7 @@ local plugins = {
     config = function()
       require "plugins.configs.conform"
     end,
-    event = { "BufWritePre" }
+    event = { "BufWritePre" },
   },
 
   -- indent lines
@@ -175,21 +175,21 @@ local plugins = {
     config = function()
       require "plugins.configs.mini-surround"
     end,
-    event = "VeryLazy"
+    event = "VeryLazy",
   },
   {
     "echasnovski/mini.ai",
     config = function()
       require "plugins.configs.mini-ai"
     end,
-    event = "VeryLazy"
+    event = "VeryLazy",
   },
   {
     "otavioschwanck/arrow.nvim",
     config = function()
       require "plugins.configs.arrow"
     end,
-    event = "VeryLazy"
+    event = "VeryLazy",
   },
   {
     "folke/persistence.nvim",
@@ -207,14 +207,14 @@ local plugins = {
     config = function()
       require "plugins.configs.mini-starter"
     end,
-    event = "VimEnter"
+    event = "VimEnter",
   },
   {
     "nat-418/boole.nvim",
     config = function()
       require "plugins.configs.boole"
     end,
-    event = "VeryLazy"
+    event = "VeryLazy",
   },
   {
     "nvim-lualine/lualine.nvim",
@@ -222,7 +222,7 @@ local plugins = {
     config = function()
       require "plugins.configs.lualine"
     end,
-    event = "VeryLazy"
+    event = "VeryLazy",
   },
   {
     "vigoux/notifier.nvim",
@@ -231,14 +231,14 @@ local plugins = {
         -- You configuration here
       }
     end,
-    event = "VeryLazy"
+    event = "VeryLazy",
   },
   {
     "cappyzawa/trim.nvim",
     config = function()
       require "plugins.configs.trim"
     end,
-    event = "BufWritePre"
+    event = "BufWritePre",
   },
   {
     "TobinPalmer/rayso.nvim",
@@ -269,12 +269,12 @@ local plugins = {
     config = function()
       require "plugins.configs.ts-error-translator"
     end,
-    event = "LspAttach"
+    event = "LspAttach",
   },
   {
     "chrisgrieser/nvim-scissors",
     dependencies = { "nvim-telescope/telescope.nvim" }, -- apenas se quiser integrar com o Telescope
-    event = "VeryLazy"
+    event = "VeryLazy",
   },
   {
     "chrisgrieser/nvim-rip-substitute",
@@ -503,7 +503,7 @@ local plugins = {
       "nvim-tree/nvim-web-devicons", -- optional, but recommended
     },
     lazy = false, -- neo-tree will lazily load itself
-    cmd = "Neotree"
+    cmd = "Neotree",
   },
   {
     "stevearc/aerial.nvim",

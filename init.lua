@@ -21,4 +21,8 @@ vim.opt.rtp:prepend(lazypath)
 
 require "plugins"
 
+-- vim.cmd.colorscheme "everforest"
 vim.cmd.colorscheme "everforest"
+
+vim.opt.termguicolors = true
+vim.opt.background = "light"
