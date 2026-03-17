@@ -1,3 +1,37 @@
+vim.api.nvim_create_user_command("CopyPath", function()
+  local path = vim.api.nvim_buf_get_name(0)
+
+  if path == "" then
+    return
+  end
+
+  vim.fn.setreg("+", path) -- copia para o clipboard
+  print("Path copiado: " .. path)
+end, {})
+
+local function get_clipboard()
+  local candidates = {
+    "wl-paste",
+    "xclip -selection clipboard -o",
+    "xsel --clipboard --output",
+  }
+
+  for _, cmd in ipairs(candidates) do
+    if vim.fn.executable(vim.split(cmd, " ")[1]) == 1 then
+      return vim.fn.system(cmd)
+    end
+  end
+
+  error "Nenhuma ferramenta de clipboard encontrada (wl-paste, xclip ou xsel)"
+end
+
+vim.api.nvim_create_user_command("PasteTS", function()
+  local clipboard = get_clipboard()
+  local result = vim.fn.system("colar-ts", clipboard)
+
+  vim.api.nvim_put(vim.split(result, "\n"), "l", true, true)
+end, {})
+
 vim.api.nvim_create_user_command("FixImports", function()
   local buf = vim.api.nvim_get_current_buf()
   local fname = vim.api.nvim_buf_get_name(buf)
@@ -33,7 +67,7 @@ end, {})
 vim.api.nvim_create_autocmd("BufWritePre", {
   pattern = { "*.js", "*.ts", "*.tsx", "*.jsx", "*.json" },
   callback = function(args)
-    vim.lsp.buf.format({ async = false })
+    vim.lsp.buf.format { async = false }
   end,
 })
 

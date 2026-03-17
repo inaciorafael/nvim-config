@@ -76,6 +76,11 @@ local plugins = {
 
   {
     "williamboman/mason.nvim",
+    -- Esta linha é CRÍTICA - força o carregamento imediato
+    lazy = false,
+    -- Prioridade alta para carregar antes de outros plugins
+    priority = 1000,
+    -- Configuração simplificada
     build = ":MasonUpdate",
     cmd = { "Mason", "MasonInstall" },
     config = function()
