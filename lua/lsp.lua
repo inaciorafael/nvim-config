@@ -97,7 +97,7 @@ local servers = {
         },
       },
     },
-    filetypes = { "javascript", "typescript", "vue" },
+    filetypes = { "javascript", "typescript", "vue", "typescriptreact", "javascriptreact" },
   },
 
   vue_ls = {
