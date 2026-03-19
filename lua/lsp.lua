@@ -84,7 +84,7 @@ local servers = {
   },
 
   tailwindcss = {
-    filetypes = { "typescriptreact", "javascriptreact", "html" },
+    filetypes = { "typescriptreact", "javascriptreact", "html", "vue" },
   },
 
   ts_ls = {
