@@ -106,7 +106,7 @@ local servers = {
 
   eslint = {
     cmd = { "vscode-eslint-language-server", "--stdio" },
-    filetypes = { "javascript", "typescript" },
+    filetypes = { "javascript", "typescript", "typescriptreact", "javascriptreact" },
     root_markers = { ".eslintrc.js", ".eslintrc.json", "eslint.config.js", "package.json" },
     settings = {
       workingDirectory = { mode = "location" },

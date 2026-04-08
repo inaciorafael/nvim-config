@@ -129,6 +129,8 @@ local plugins = {
     end,
   },
 
+  -- novo
+
   -- git status on signcolumn etc
   {
     "lewis6991/gitsigns.nvim",
