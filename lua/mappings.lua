@@ -7,6 +7,10 @@ vim.g.mapleader = " "
 
 map("n", "<C-s>", functions.switch_case, default_opts)
 
+-- Quickfix
+map("n", "<M-j>", "<cmd>cnext<CR>")
+map("n", "<M-k>", "<cmd>cprevious<CR>")
+
 -- Motion windows
 map("n", "<C-l>", "<C-w>l")
 map("n", "<C-h>", "<C-w>h")
